@@ -7,6 +7,10 @@ using TouchScript.Gestures;
 
 public class TouchZone : MonoBehaviour {
 
+    public  enum InputState { Default,Touch,Release};
+
+    public  InputState inputstate;
+    
     /// <summary>タッチ開始座標 </summary>
     [HideInInspector]
     public Vector3 pressStartPosition;
@@ -36,10 +40,15 @@ public class TouchZone : MonoBehaviour {
     void UnsubscribeEvent(){
         // 登録を解除
         GetComponent<PressGesture>().Pressed += PressedHandle;
+        GetComponent<TapGesture>().Tapped += TapeedHandle;
+        GetComponent<ReleaseGesture>().Released += ReleasedHandle;
+
+
     }
 
     //タップ処理
     void PressedHandle(object arg_sender, System.EventArgs arg_e){
+        inputstate = InputState.Touch;
         var send = arg_sender as PressGesture;
         pressStartPosition = send.ScreenPosition;
         Debug.Log("プレス");
@@ -48,6 +57,7 @@ public class TouchZone : MonoBehaviour {
 
     //リリース処理
     void ReleasedHandle(object arg_sender, System.EventArgs arg_e){
+        inputstate = InputState.Release;
         Debug.Log("リリース");
     }
 
