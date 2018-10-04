@@ -1,9 +1,7 @@
 fileFormatVersion: 2
-guid: a22a0a3262f961b488fe8d35c35f9e0a
+guid: 74a263ba6fa5448488ac892c1f102939
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: chara_0
-    21300002: chara_1
+  fileIDToRecycleName: {}
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -42,7 +40,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -71,44 +69,13 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-  - serializedVersion: 2
-    buildTarget: Standalone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: chara_0
-      rect:
-        serializedVersion: 2
-        x: 40
-        y: 0
-        width: 239
-        height: 260
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 32, y: 115, z: 46, w: 116}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bde0d4dc827acbd4dbc8319c339348ae
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 1ee4c262c909973479fa17dcd1688363
+    spriteID: a4b20fe4c1db9fc4d8b33121c88016be
     vertices: []
     indices: 
     edges: []

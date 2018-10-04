@@ -51,6 +51,8 @@ public class TouchZone : MonoBehaviour {
         inputstate = InputState.Touch;
         var send = arg_sender as PressGesture;
         pressStartPosition = send.ScreenPosition;
+
+        pressing = true;
         Debug.Log("プレス");
 
     }
@@ -59,6 +61,7 @@ public class TouchZone : MonoBehaviour {
     void ReleasedHandle(object arg_sender, System.EventArgs arg_e){
         inputstate = InputState.Release;
         Debug.Log("リリース");
+        pressing = false;
     }
 
     void TapeedHandle(object arg_sender, System.EventArgs arg_e){
