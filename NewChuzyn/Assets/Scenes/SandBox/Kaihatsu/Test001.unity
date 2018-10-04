@@ -331,7 +331,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_camera: {fileID: 89659160}
   m_touchZone: {fileID: 1881790463}
-  m_cursorPrefab: {fileID: 1737448676648852, guid: 124e623cc38f389458440701c26003cb,
+  m_cursorPrefab: {fileID: 1062582576688004, guid: 270064d86177ca04aa5f4586b88a281e,
     type: 2}
 --- !u!224 &872028994 stripped
 RectTransform:
@@ -518,6 +518,7 @@ GameObject:
   - component: {fileID: 1881790464}
   - component: {fileID: 1881790465}
   - component: {fileID: 1881790466}
+  - component: {fileID: 1881790467}
   m_Layer: 0
   m_Name: TouchZone
   m_TagString: Untagged
@@ -603,6 +604,7 @@ MonoBehaviour:
   pressing: 0
   releasing: 0
   tapping: 0
+  longpressing: 0
 --- !u!114 &1881790464
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -710,6 +712,42 @@ MonoBehaviour:
   distanceLimit: Infinity
   combinePointers: 0
   combinePointersInterval: 0.3
+--- !u!114 &1881790467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1881790459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65c8d97aff62a473e888feae3bec54cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnStateChange:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: TouchScript.Gestures.Gesture+GestureEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  basicEditor: 1
+  generalProps: 0
+  limitsProps: 0
+  advancedProps: 0
+  minPointers: 0
+  maxPointers: 0
+  useSendMessage: 0
+  sendStateChangeMessages: 0
+  sendMessageTarget: {fileID: 0}
+  useUnityEvents: 0
+  sendStateChangeEvents: 0
+  requireGestureToFail: {fileID: 0}
+  friendlyGestures: []
+  OnLongPress:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: TouchScript.Gestures.Gesture+GestureEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  timeToPress: 1
+  distanceLimit: Infinity
 --- !u!1 &2097292786
 GameObject:
   m_ObjectHideFlags: 0

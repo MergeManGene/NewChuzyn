@@ -17,7 +17,7 @@ public class TouchZone : MonoBehaviour {
 
     /// <summary>Press用フラグ </summary>
     [HideInInspector]
-    public bool pressing, releasing,tapping;
+    public bool pressing, releasing, tapping, longpressing;
 
     /// <summary>
     /// 開始処理
@@ -27,6 +27,7 @@ public class TouchZone : MonoBehaviour {
         GetComponent<PressGesture>().Pressed += PressedHandle;
         GetComponent<TapGesture>().Tapped += TapeedHandle;
         GetComponent<ReleaseGesture>().Released += ReleasedHandle;
+        GetComponent<LongPressGesture>().LongPressed += LongPressedHandle;
     }
 
     private void OnDisable(){
@@ -42,8 +43,7 @@ public class TouchZone : MonoBehaviour {
         GetComponent<PressGesture>().Pressed += PressedHandle;
         GetComponent<TapGesture>().Tapped += TapeedHandle;
         GetComponent<ReleaseGesture>().Released += ReleasedHandle;
-
-
+        GetComponent<LongPressGesture>().LongPressed += LongPressedHandle;
     }
 
     //タップ処理
@@ -64,5 +64,11 @@ public class TouchZone : MonoBehaviour {
     void TapeedHandle(object arg_sender, System.EventArgs arg_e){
         var send = arg_sender as TapGesture;
         Debug.Log("タップ");
+    }
+
+    void LongPressedHandle(object arg_sender, System.EventArgs arg_e){
+        var send = arg_sender as LongPressGesture;
+        longpressing = true;
+        Debug.Log("長押し");
     }
 }

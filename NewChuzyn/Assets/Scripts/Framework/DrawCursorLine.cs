@@ -5,9 +5,6 @@ using UnityEngine;
 public class DrawCursorLine : MonoBehaviour {
 
     [SerializeField]
-    private Camera m_camera;
-
-    [SerializeField]
     private TouchZone m_touchZone;
 
     /// <summary>カーソルプレハブ</summary>
@@ -19,13 +16,15 @@ public class DrawCursorLine : MonoBehaviour {
 
     /// <summary>格納用タッチ開始座標</summary>
     private Vector2 m_curentTouchStartPos;
-    
+
+    /// <summary>格納用タッチ開始座標</summary>
+    private Vector2 m_currentTouchMovePos;
     /// <summary>描画フラグ</summary>
     private bool drawing;
 	
 	// Update is called once per frame
 	void Update () {
-        DrawLine();
+        DrawLine();     
     }
 
     void DrawLine(){
@@ -37,7 +36,13 @@ public class DrawCursorLine : MonoBehaviour {
                 cursorObject = Instantiate(m_cursorPrefab, m_curentTouchStartPos, Quaternion.identity);
                 drawing = true;
             }
-        }else{
+            else{
+                Vector2 touchPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                float hogetouch = touchPos.x - m_curentTouchStartPos.x;
+                Debug.Log("差分"+hogetouch);
+            }
+        }
+        else{
             Destroy(cursorObject);
             drawing = false;
         }
