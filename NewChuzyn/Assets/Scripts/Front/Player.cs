@@ -6,8 +6,11 @@ public class Player : MonoBehaviour {
     [SerializeField]
     private TouchZone m_touchZone;
 
+    public enum PlayerState { Deffault,Move,Shot};
+    public PlayerState m_playerState;
+    
     /// <summary>移動速度 </summary>
-    [SerializeField][Range(0.01f,0.05f)]
+    [SerializeField][Range(0.1f,0.5f)]
     private float m_moveSpeed;
 
     //移動を開始する値
@@ -16,6 +19,9 @@ public class Player : MonoBehaviour {
 
     /// <summary>二点の間隔 </summary>
     private float m_length;
+
+    /// <summary>射出待機フラグ </summary>
+    private bool ShotStanding;
 
     private Rigidbody2D m_rigidbody2D;
 
@@ -27,12 +33,27 @@ public class Player : MonoBehaviour {
     }
 
     // Update is called once per frame
-    void Update () {
-        PlayerMove();
-	}
+    private void Update () {
+        CurrentPlayerAction();
+        Debug.Log(m_playerState);
+        Debug.Log(ShotStanding);
+    }
 
-    void PlayerMove(){
-        if (m_touchZone.pressing)
+    private void CurrentPlayerAction(){
+        if (m_touchZone.longpressing && Input.mousePosition == m_touchZone.pressStartPosition){
+            m_playerState = PlayerState.Shot;
+        }else if (m_touchZone.pressing && !m_touchZone.longpressing){
+            m_playerState = PlayerState.Move;
+        }else if (!m_touchZone.pressing && !m_touchZone.longpressing){
+            m_playerState = PlayerState.Deffault;
+        }
+
+        PlayerAction();
+    }
+
+    private void PlayerAction()
+    {
+        if (m_playerState == PlayerState.Move)
         {
             Vector2 currentTouchPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Vector2 touchStartPos = Camera.main.ScreenToWorldPoint(m_touchZone.pressStartPosition);
@@ -48,6 +69,24 @@ public class Player : MonoBehaviour {
                 m_spriteRenderer.flipX = true;
                 transform.position -= new Vector3(m_moveSpeed, 0, 0);
             }
+            Debug.Log("移動中");
         }
+
+        if (m_playerState == PlayerState.Shot)
+        {
+            ShotStanding = true;
+            Debug.Log("長押しモード");
+        }
+
+        if (m_playerState == PlayerState.Deffault)
+        {
+            if (!m_touchZone.longpressing){
+                ShotStanding = false;
+            }
+        }
+    }
+
+    private void PlayerShot(){
+             
     }
 }

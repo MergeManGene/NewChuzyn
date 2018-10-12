@@ -39,7 +39,6 @@ public class DrawCursorLine : MonoBehaviour {
             else{
                 Vector2 touchPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 float hogetouch = touchPos.x - m_curentTouchStartPos.x;
-                Debug.Log("差分"+hogetouch);
             }
         }
         else{

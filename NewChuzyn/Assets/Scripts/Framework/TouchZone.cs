@@ -15,9 +15,12 @@ public class TouchZone : MonoBehaviour {
     [HideInInspector]
     public Vector3 pressStartPosition;
 
+    [HideInInspector]
+    public Vector3 flickEndPosition;
+
     /// <summary>Press用フラグ </summary>
     [HideInInspector]
-    public bool pressing, releasing, tapping, longpressing;
+    public bool pressing, releasing, tapping, longpressing,flicking;
 
     /// <summary>
     /// 開始処理
@@ -28,6 +31,7 @@ public class TouchZone : MonoBehaviour {
         GetComponent<TapGesture>().Tapped += TapeedHandle;
         GetComponent<ReleaseGesture>().Released += ReleasedHandle;
         GetComponent<LongPressGesture>().LongPressed += LongPressedHandle;
+        GetComponent<FlickGesture>().Flicked += FlickedHandle;
     }
 
     private void OnDisable(){
@@ -44,6 +48,7 @@ public class TouchZone : MonoBehaviour {
         GetComponent<TapGesture>().Tapped += TapeedHandle;
         GetComponent<ReleaseGesture>().Released += ReleasedHandle;
         GetComponent<LongPressGesture>().LongPressed += LongPressedHandle;
+        GetComponent<FlickGesture>().Flicked += FlickedHandle;
     }
 
     //タップ処理
@@ -54,7 +59,6 @@ public class TouchZone : MonoBehaviour {
 
         pressing = true;
         Debug.Log("プレス");
-
     }
 
     //リリース処理
@@ -62,6 +66,7 @@ public class TouchZone : MonoBehaviour {
         inputstate = InputState.Release;
         Debug.Log("リリース");
         pressing = false;
+        longpressing = false;
     }
 
     void TapeedHandle(object arg_sender, System.EventArgs arg_e){
@@ -73,5 +78,18 @@ public class TouchZone : MonoBehaviour {
         var send = arg_sender as LongPressGesture;
         longpressing = true;
         Debug.Log("長押し");
+
+        //長押し中フリックが残っていたらオフ
+        if (flicking)
+            flicking = false;
+    }
+
+    void FlickedHandle(object arg_sender,System.EventArgs arg_e){
+        var gesture = arg_sender as FlickGesture;
+
+        Vector3 flickEnd = gesture.ScreenPosition;
+        flickEndPosition = Camera.main.ScreenToWorldPoint(flickEnd);
+        if(longpressing)flicking = true;
+        Debug.Log("フリッキング");
     }
 }
