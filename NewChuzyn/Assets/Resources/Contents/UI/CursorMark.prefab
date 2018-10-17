@@ -112,7 +112,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb2a8defc24da594792a9d35cd8a92b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_player: {fileID: 0}
   m_startMark: {fileID: 1006744756489494}
+  m_longPressMark: {fileID: 1396775237926632, guid: 93270d37bcdd12f40addaefd8acaa0fa,
+    type: 2}
 --- !u!120 &120632238708626962
 LineRenderer:
   m_ObjectHideFlags: 1

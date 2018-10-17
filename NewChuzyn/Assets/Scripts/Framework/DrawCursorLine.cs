@@ -7,6 +7,9 @@ public class DrawCursorLine : MonoBehaviour {
     [SerializeField]
     private TouchZone m_touchZone;
 
+    [SerializeField]
+    private Player m_player;
+
     /// <summary>カーソルプレハブ</summary>
     [SerializeField]
     private GameObject m_cursorPrefab;
@@ -24,26 +27,29 @@ public class DrawCursorLine : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        DrawLine();     
+        m_curentTouchStartPos = Camera.main.ScreenToWorldPoint(m_touchZone.pressStartPosition);
+        DrawCursor();  
     }
 
-    void DrawLine(){
+    
+    private void DrawLine(){
+        cursorObject = Instantiate(m_cursorPrefab, m_curentTouchStartPos, Quaternion.identity);
+    }
+    private void DrawCursor(){
         //タップ時に描画
         if (m_touchZone.inputstate == TouchZone.InputState.Touch){
-            m_curentTouchStartPos = Camera.main.ScreenToWorldPoint(m_touchZone.pressStartPosition);
+            
             //描画されていなければ描画
             if (!drawing){
-                cursorObject = Instantiate(m_cursorPrefab, m_curentTouchStartPos, Quaternion.identity);
+                DrawLine();
                 drawing = true;
-            }
-            else{
-                Vector2 touchPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                float hogetouch = touchPos.x - m_curentTouchStartPos.x;
             }
         }
         else{
             Destroy(cursorObject);
             drawing = false;
         }
+
+
     }
 }

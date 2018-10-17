@@ -9,6 +9,7 @@ public class ExtendBall : MonoBehaviour {
     [SerializeField]
     private Player m_player;
     private Vector3 m_playerPositon;
+
     /// <summary>当たったオブジェクト格納 </summary>
     private GameObject m_colGameObject;
 
@@ -21,6 +22,11 @@ public class ExtendBall : MonoBehaviour {
     /// <summary>当たった座標 </summary>
     private Vector3 m_hitPositon;
 
+    /// <summary>フックボールの移動速度 </summary>
+    [SerializeField]
+    private float m_ballSpeed;
+
+    /// <summary>反映角度 </summary>
     private float AngleRotation;
 
     /// <summary>向いている方向ベクトル </summary>
@@ -33,6 +39,8 @@ public class ExtendBall : MonoBehaviour {
 
     private void Start(){
         m_lineRenderer = GetComponent<LineRenderer>();
+        
+        //開始時はデフォルト状態
         shotState = ShotState.def;
     }
 
@@ -40,14 +48,15 @@ public class ExtendBall : MonoBehaviour {
 
         transform.position = m_player.transform.position;
 
+        //プレイヤーが射出待機状態の時射出可能
         if (m_player.m_playerState==Player.PlayerState.Shot)
                 shotState = ShotState.shot;
     }
 
     private void BallShot(){
 
+        //フリックされたら射出
         if (m_touchZone.flicking){
-            Debug.Log("タッチエンド"+m_touchZone.flickEndPosition);
 
             m_startPostion = Camera.main.ScreenToWorldPoint(m_touchZone.pressStartPosition);
             //角度指定
@@ -61,11 +70,12 @@ public class ExtendBall : MonoBehaviour {
             transform.rotation = Quaternion.Euler(0f, 0f, AngleRotation);
 
             //移動量
-            angleVec = transform.rotation * new Vector3(10f, 0f, 0);
+            angleVec = transform.rotation * new Vector3(m_ballSpeed, 0f, 0);
 
             //向いている方向に向かって移動
             transform.position += angleVec * Time.deltaTime;
         }
+
 
         else if (m_player.m_playerState == Player.PlayerState.Deffault)
             shotState = ShotState.def;
@@ -74,8 +84,13 @@ public class ExtendBall : MonoBehaviour {
     private void BackBall(){
         switch (m_colGameObject.tag)
         {
-            case "Wall":
+            //地形に当たったら戻ってくる
+            case "Ground":
                 transform.position = Vector3.MoveTowards(transform.position, m_player.transform.position, 0.5f);
+                break;
+            //壁に当たったらその座標に移動する
+            case "Wall":
+                m_player.transform.position = Vector3.MoveTowards(m_player.transform.position, m_hitPositon, 0.5f);
                 break;
             default:
                 break;
@@ -89,6 +104,10 @@ public class ExtendBall : MonoBehaviour {
         m_hitPositon = transform.position;
         switch (arg_collision.tag){
             case "Wall":
+                m_colGameObject = arg_collision.gameObject;
+                shotState = ShotState.back;
+                break;
+            case "Ground":
                 m_colGameObject = arg_collision.gameObject;
                 shotState = ShotState.back;
                 break;

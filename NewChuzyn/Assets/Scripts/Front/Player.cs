@@ -6,6 +6,7 @@ public class Player : MonoBehaviour {
     [SerializeField]
     private TouchZone m_touchZone;
 
+    /// <summary>移動速度 </summary>
     public enum PlayerState { Deffault,Move,Shot};
     public PlayerState m_playerState;
     
@@ -36,7 +37,6 @@ public class Player : MonoBehaviour {
     private void Update () {
         CurrentPlayerAction();
         Debug.Log(m_playerState);
-        Debug.Log(ShotStanding);
     }
 
     private void CurrentPlayerAction(){
@@ -71,22 +71,5 @@ public class Player : MonoBehaviour {
             }
             Debug.Log("移動中");
         }
-
-        if (m_playerState == PlayerState.Shot)
-        {
-            ShotStanding = true;
-            Debug.Log("長押しモード");
-        }
-
-        if (m_playerState == PlayerState.Deffault)
-        {
-            if (!m_touchZone.longpressing){
-                ShotStanding = false;
-            }
-        }
-    }
-
-    private void PlayerShot(){
-             
     }
 }
