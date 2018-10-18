@@ -84,11 +84,14 @@ public class TouchZone : MonoBehaviour {
             flicking = false;
     }
 
+    //フリック検知
     void FlickedHandle(object arg_sender,System.EventArgs arg_e){
         var gesture = arg_sender as FlickGesture;
 
         Vector3 flickEnd = gesture.ScreenPosition;
         flickEndPosition = Camera.main.ScreenToWorldPoint(flickEnd);
+
+        //暴発防止のため長押し時のみフリックを有効にする
         if(longpressing)flicking = true;
         Debug.Log("フリッキング");
     }
