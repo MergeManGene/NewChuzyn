@@ -103,7 +103,6 @@ public class ExtendBall : MonoBehaviour {
         //プレイヤーの位置まで戻ったら通常時に移行
         if (transform.position == m_player.transform.position)
             shotState = ShotState.def;
-
     }
 
     private void OnTriggerEnter2D(Collider2D arg_collision){
