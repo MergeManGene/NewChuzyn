@@ -9,30 +9,30 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1628381340448014}
+  m_RootGameObject: {fileID: 1922046628459900}
   m_IsPrefabAsset: 1
---- !u!1 &1628381340448014
+--- !u!1 &1922046628459900
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4457594546499346}
-  - component: {fileID: 114520788799466724}
+  - component: {fileID: 4386557142916844}
+  - component: {fileID: 114190798816885128}
   m_Layer: 0
   m_Name: Cam_Con
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4457594546499346
+--- !u!4 &4386557142916844
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1628381340448014}
+  m_GameObject: {fileID: 1922046628459900}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.8677162, y: -0.13245662, z: 0.24671218}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -40,15 +40,15 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114520788799466724
+--- !u!114 &114190798816885128
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1628381340448014}
+  m_GameObject: {fileID: 1922046628459900}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e44238ab04baa1b46b30cc280256d48f, type: 3}
+  m_Script: {fileID: 11500000, guid: bcf5ee4be7bb7c44c9b85c76abf44cff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_obj_camera: {fileID: 0}
@@ -77,7 +77,7 @@ MonoBehaviour:
         outWeight: 0.33333334
       m_PreInfinity: 2
       m_PostInfinity: 2
-      m_RotationOrder: 0
+      m_RotationOrder: 4
     num_complateFrame: 60
     pos_target: {fileID: 0}
     vec_target: {x: 0, y: 0}
@@ -106,7 +106,7 @@ MonoBehaviour:
         outWeight: 0.33333334
       m_PreInfinity: 2
       m_PostInfinity: 2
-      m_RotationOrder: 0
+      m_RotationOrder: 4
     num_complateFrame: 60
     pos_target: {fileID: 0}
     vec_target: {x: 17.5, y: 0}
@@ -135,7 +135,7 @@ MonoBehaviour:
         outWeight: 0.33333334
       m_PreInfinity: 2
       m_PostInfinity: 2
-      m_RotationOrder: 0
+      m_RotationOrder: 4
     num_complateFrame: 60
     pos_target: {fileID: 0}
     vec_target: {x: 0, y: 0}
@@ -164,7 +164,7 @@ MonoBehaviour:
         outWeight: 0.33333334
       m_PreInfinity: 2
       m_PostInfinity: 2
-      m_RotationOrder: 0
+      m_RotationOrder: 4
     num_complateFrame: 60
     pos_target: {fileID: 0}
     vec_target: {x: 18.5, y: 10}
@@ -193,7 +193,7 @@ MonoBehaviour:
         outWeight: 0.33333334
       m_PreInfinity: 2
       m_PostInfinity: 2
-      m_RotationOrder: 0
+      m_RotationOrder: 4
     num_complateFrame: 60
     pos_target: {fileID: 0}
     vec_target: {x: 36, y: 10}
@@ -222,7 +222,7 @@ MonoBehaviour:
         outWeight: 0.33333334
       m_PreInfinity: 2
       m_PostInfinity: 2
-      m_RotationOrder: 0
+      m_RotationOrder: 4
     num_complateFrame: 60
     pos_target: {fileID: 0}
     vec_target: {x: 36, y: 0}
@@ -251,7 +251,7 @@ MonoBehaviour:
         outWeight: 0.33333334
       m_PreInfinity: 2
       m_PostInfinity: 2
-      m_RotationOrder: 0
+      m_RotationOrder: 4
     num_complateFrame: 60
     pos_target: {fileID: 0}
     vec_target: {x: 54, y: 0}
@@ -280,7 +280,7 @@ MonoBehaviour:
         outWeight: 0.33333334
       m_PreInfinity: 2
       m_PostInfinity: 2
-      m_RotationOrder: 0
+      m_RotationOrder: 4
     num_complateFrame: 60
     pos_target: {fileID: 0}
     vec_target: {x: 54, y: 0}
@@ -309,7 +309,7 @@ MonoBehaviour:
         outWeight: 0.33333334
       m_PreInfinity: 2
       m_PostInfinity: 2
-      m_RotationOrder: 0
+      m_RotationOrder: 4
     num_complateFrame: 60
     pos_target: {fileID: 0}
     vec_target: {x: 54, y: 0}
