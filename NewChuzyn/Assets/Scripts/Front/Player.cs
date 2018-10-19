@@ -39,12 +39,17 @@ public class Player : MonoBehaviour {
         Debug.Log(m_playerState);
     }
 
+    //各状態のプレイヤーアクション
     private void CurrentPlayerAction(){
+
+        //一定値その場で長押し状態で射出待機状態
         if (m_touchZone.longpressing && Input.mousePosition == m_touchZone.pressStartPosition){
             m_playerState = PlayerState.Shot;
-        }else if (m_touchZone.pressing && !m_touchZone.longpressing){
+        }//プレスのみの場合は通常移動
+        else if (m_touchZone.pressing && !m_touchZone.longpressing){
             m_playerState = PlayerState.Move;
-        }else if (!m_touchZone.pressing && !m_touchZone.longpressing){
+        }//入力が何もない場合デフォルト状態
+        else if (!m_touchZone.pressing && !m_touchZone.longpressing){
             m_playerState = PlayerState.Deffault;
         }
 
@@ -53,6 +58,7 @@ public class Player : MonoBehaviour {
 
     private void PlayerAction()
     {
+        //Move状態時のアクション
         if (m_playerState == PlayerState.Move)
         {
             Vector2 currentTouchPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -69,6 +75,7 @@ public class Player : MonoBehaviour {
                 m_spriteRenderer.flipX = true;
                 transform.position -= new Vector3(m_moveSpeed, 0, 0);
             }
+
             Debug.Log("移動中");
         }
     }

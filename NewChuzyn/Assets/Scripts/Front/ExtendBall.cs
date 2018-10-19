@@ -37,6 +37,9 @@ public class ExtendBall : MonoBehaviour {
     [SerializeField]
     private TouchZone m_touchZone;
 
+
+    private bool MovingBall;
+
     private void Start(){
         m_lineRenderer = GetComponent<LineRenderer>();
         
@@ -46,6 +49,7 @@ public class ExtendBall : MonoBehaviour {
 
     private void Deffault(){
 
+        //ボールは常にプレイヤー座標に追従
         transform.position = m_player.transform.position;
 
         //プレイヤーが射出待機状態の時射出可能
@@ -76,11 +80,12 @@ public class ExtendBall : MonoBehaviour {
             transform.position += angleVec * Time.deltaTime;
         }
 
-
+        //指が離されたら通常に戻る
         else if (m_player.m_playerState == Player.PlayerState.Deffault)
             shotState = ShotState.def;
     }
 
+    //何かに衝突した際の動作
     private void BackBall(){
         switch (m_colGameObject.tag)
         {
@@ -95,9 +100,9 @@ public class ExtendBall : MonoBehaviour {
             default:
                 break;
         }
+        //プレイヤーの位置まで戻ったら通常時に移行
         if (transform.position == m_player.transform.position)
             shotState = ShotState.def;
-
     }
 
     private void OnTriggerEnter2D(Collider2D arg_collision){
