@@ -11,7 +11,7 @@ public class Player : MonoBehaviour {
     public PlayerState m_playerState;
     
     /// <summary>移動速度 </summary>
-    [SerializeField][Range(0.1f,0.5f)]
+    [SerializeField][Range(0.01f,0.05f)]
     private float m_moveSpeed;
 
     //移動を開始する値
