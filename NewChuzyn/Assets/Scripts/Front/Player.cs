@@ -28,9 +28,12 @@ public class Player : MonoBehaviour {
 
     private SpriteRenderer m_spriteRenderer;
 
+    private Animator m_animator;
+
     private void Start(){
         m_rigidbody2D = GetComponent<Rigidbody2D>();
         m_spriteRenderer = GetComponent<SpriteRenderer>();
+        m_animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -48,9 +51,11 @@ public class Player : MonoBehaviour {
         }//プレスのみの場合は通常移動
         else if (m_touchZone.pressing && !m_touchZone.longpressing){
             m_playerState = PlayerState.Move;
+            m_animator.Play("PlayerMove");
         }//入力が何もない場合デフォルト状態
         else if (!m_touchZone.pressing && !m_touchZone.longpressing){
             m_playerState = PlayerState.Deffault;
+            m_animator.Play("Player");
         }
 
         PlayerAction();

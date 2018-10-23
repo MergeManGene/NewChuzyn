@@ -5392,6 +5392,29 @@ EdgeCollider2D:
   m_Points:
   - {x: 35.19404, y: 1.2023771}
   - {x: 35.134567, y: -8.63161}
+--- !u!1 &1384127863 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1068144442489074, guid: 2cf90300edbd5c4479ea04037f37fe28,
+    type: 2}
+  m_PrefabInternal: {fileID: 1755278210}
+--- !u!95 &1384127868
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1384127863}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 07f4a01c12135354f9f25346df6fcf66, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1384636321
 Prefab:
   m_ObjectHideFlags: 0
@@ -6164,7 +6187,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 0.39215687}
+  m_Color: {r: 1, g: 0, b: 0, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
