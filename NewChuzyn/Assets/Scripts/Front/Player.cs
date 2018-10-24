@@ -59,6 +59,7 @@ public class Player : MonoBehaviour {
         }
 
         PlayerAction();
+
     }
 
     private void PlayerAction()
