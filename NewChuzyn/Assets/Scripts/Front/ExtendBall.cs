@@ -133,5 +133,10 @@ public class ExtendBall : MonoBehaviour {
             BallShot();
         if (shotState == ShotState.back)
             BackBall();
+
+        //プレイヤーが非アクティブ時にはボールも非表示
+        if (!m_player.gameObject.activeSelf){
+            this.gameObject.SetActive(false);
+        }
     }
 }
