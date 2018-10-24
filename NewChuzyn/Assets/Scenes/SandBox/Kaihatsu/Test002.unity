@@ -390,7 +390,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: bf4c02469c7540c42ac789f71f3ea741, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -568,7 +568,7 @@ GameObject:
   - component: {fileID: 226737868}
   m_Layer: 0
   m_Name: spritesheet_765 (4)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -673,7 +673,7 @@ GameObject:
   - component: {fileID: 246034141}
   m_Layer: 0
   m_Name: spritesheet_765
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1257,7 +1257,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4896603453202406, guid: 2cdd878c75b11a144b5e47f9674eed10, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4896603453202406, guid: 2cdd878c75b11a144b5e47f9674eed10, type: 2}
       propertyPath: m_LocalScale.x
@@ -1408,7 +1408,7 @@ GameObject:
   - component: {fileID: 495050119}
   m_Layer: 0
   m_Name: spritesheet_765 (6)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4580,7 +4580,7 @@ GameObject:
   - component: {fileID: 516929064}
   m_Layer: 0
   m_Name: spritesheet_765 (1)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4950,7 +4950,7 @@ GameObject:
   - component: {fileID: 922540657}
   m_Layer: 0
   m_Name: spritesheet_765 (5)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5219,7 +5219,7 @@ GameObject:
   - component: {fileID: 1320170047}
   m_Layer: 0
   m_Name: spritesheet_765 (2)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5594,7 +5594,6 @@ Transform:
   m_LocalPosition: {x: -19.552376, y: -2.9803042, z: 9.974127}
   m_LocalScale: {x: 7.0630693, y: 0.945062, z: 0.511}
   m_Children:
-  - {fileID: 1959386251}
   - {fileID: 1117944300}
   m_Father: {fileID: 762500813}
   m_RootOrder: 1
@@ -5612,7 +5611,7 @@ GameObject:
   - component: {fileID: 1539406735}
   m_Layer: 0
   m_Name: spritesheet_765 (7)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5717,7 +5716,7 @@ GameObject:
   - component: {fileID: 1565438438}
   m_Layer: 0
   m_Name: spritesheet_765 (3)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5943,60 +5942,6 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78bd19ad23455da4ab19e0c1d26b43ea, type: 2}
   m_IsPrefabAsset: 0
---- !u!1001 &1730885163
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1518517666}
-    m_Modifications:
-    - target: {fileID: 4896603453202406, guid: 2cdd878c75b11a144b5e47f9674eed10, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4896603453202406, guid: 2cdd878c75b11a144b5e47f9674eed10, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4896603453202406, guid: 2cdd878c75b11a144b5e47f9674eed10, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4896603453202406, guid: 2cdd878c75b11a144b5e47f9674eed10, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4896603453202406, guid: 2cdd878c75b11a144b5e47f9674eed10, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4896603453202406, guid: 2cdd878c75b11a144b5e47f9674eed10, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4896603453202406, guid: 2cdd878c75b11a144b5e47f9674eed10, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4896603453202406, guid: 2cdd878c75b11a144b5e47f9674eed10, type: 2}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4896603453202406, guid: 2cdd878c75b11a144b5e47f9674eed10, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4896603453202406, guid: 2cdd878c75b11a144b5e47f9674eed10, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4896603453202406, guid: 2cdd878c75b11a144b5e47f9674eed10, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 2cdd878c75b11a144b5e47f9674eed10, type: 2}
-  m_IsPrefabAsset: 0
 --- !u!1001 &1755278210
 Prefab:
   m_ObjectHideFlags: 0
@@ -6123,11 +6068,6 @@ EdgeCollider2D:
   m_Points:
   - {x: -18.774147, y: -3.1117334}
   - {x: -18.737377, y: -8.076138}
---- !u!4 &1959386251 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4896603453202406, guid: 2cdd878c75b11a144b5e47f9674eed10,
-    type: 2}
-  m_PrefabInternal: {fileID: 1730885163}
 --- !u!1 &1987344795
 GameObject:
   m_ObjectHideFlags: 0

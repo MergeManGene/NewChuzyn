@@ -114,8 +114,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_player: {fileID: 0}
   m_startMark: {fileID: 1006744756489494}
-  m_longPressMark: {fileID: 1396775237926632, guid: 93270d37bcdd12f40addaefd8acaa0fa,
-    type: 2}
 --- !u!120 &120632238708626962
 LineRenderer:
   m_ObjectHideFlags: 1
