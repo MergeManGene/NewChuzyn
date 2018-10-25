@@ -27,23 +27,28 @@ public class CursorMark : MonoBehaviour {
         m_lineRenderer = GetComponent<LineRenderer>();
 
         //HierarchyからPlayerを探してコンポーネント取得
-        if (!m_player){
-            m_playerObject = GameObject.Find("Player");
-            m_player = m_playerObject.GetComponent<Player>();
+        if (!m_player) {
+            //プレイヤーが存在する時のみ取得
+            if (GameObject.Find("Player")){
+                m_playerObject = GameObject.Find("Player");
+                m_player = m_playerObject.GetComponent<Player>();
+            }
         }
     }
 
 	// Update is called once per frame
 	void Update () {
-        if (m_player.m_playerState == Player.PlayerState.Move)
-        {
-            Stroke();
-            Debug.Log("Move時はストローク描画");
-        }
+        //プレイヤーが参照できてれば(ゴリおし)
+        if (m_player){
+            if (m_player.m_playerState == Player.PlayerState.Move){
+                Stroke();
+                Debug.Log("Move時はストローク描画");
+            }
 
-        if (m_player.m_playerState == Player.PlayerState.Shot){
-            DrawLongPress();
-            Debug.Log("ショット時は長押し描画");
+            if (m_player.m_playerState == Player.PlayerState.Shot){
+                DrawLongPress();
+                Debug.Log("ショット時は長押し描画");
+            }
         }
     }
 

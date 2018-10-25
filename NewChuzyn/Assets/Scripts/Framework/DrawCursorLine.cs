@@ -7,9 +7,6 @@ public class DrawCursorLine : MonoBehaviour {
     [SerializeField]
     private TouchZone m_touchZone;
 
-    [SerializeField]
-    private Player m_player;
-
     /// <summary>カーソルプレハブ</summary>
     [SerializeField]
     private GameObject m_cursorPrefab;
