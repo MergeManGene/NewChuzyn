@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Button : MonoBehaviour {
-  
+    public GameObject doa;
+    private AudioSource se01;
     void Start () {
-        
+        se01 = GetComponent<AudioSource>();
     }
 	
 	// Update is called once per frame
@@ -15,8 +16,9 @@ public class Button : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        
-        Debug.Log("hit Object");
+        se01.Play();
+        Destroy(doa);
+        Debug.Log("へい");
 
     }
 }
