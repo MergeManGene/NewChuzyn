@@ -13,9 +13,12 @@ public class LiftBall : MonoBehaviour {
     private Switch m_switch;
 
     //リフトのボールを動かすだけ
-    private void LiftMove(){
-        if(m_switch.pushing)
-        transform.position = Vector3.Lerp(transform.position, m_endMarker.transform.position, 0.05f);
+    private void LiftMove()
+    {
+        if (m_switch.pushing)
+        {
+            transform.position = Vector3.Lerp(transform.position, m_endMarker.transform.position, 0.05f);
+        }
     }
 	
 	// Update is called once per frame
