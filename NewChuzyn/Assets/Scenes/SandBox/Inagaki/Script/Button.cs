@@ -16,9 +16,10 @@ public class Button : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        se01.Play();
-        Destroy(doa);
-        Debug.Log("へい");
-
+        
+            se01.Play();
+            Destroy(doa);
+            Debug.Log("へい");
+    
     }
 }
