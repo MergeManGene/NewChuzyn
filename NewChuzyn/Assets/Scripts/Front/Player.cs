@@ -21,19 +21,20 @@ public class Player : MonoBehaviour {
     /// <summary>二点の間隔 </summary>
     private float m_length;
 
-    /// <summary>射出待機フラグ </summary>
-    private bool ShotStanding;
-
     private Rigidbody2D m_rigidbody2D;
 
     private SpriteRenderer m_spriteRenderer;
 
     private Animator m_animator;
 
+    private AnimatorClipInfo m_animClip;
+
+
     private void Start(){
         m_rigidbody2D = GetComponent<Rigidbody2D>();
         m_spriteRenderer = GetComponent<SpriteRenderer>();
         m_animator = GetComponent<Animator>();
+        
     }
 
     // Update is called once per frame
@@ -45,6 +46,9 @@ public class Player : MonoBehaviour {
     //各状態のプレイヤーアクション
     private void CurrentPlayerAction(){
 
+        //現在再生されてるアニメーション取得
+        m_animClip = m_animator.GetCurrentAnimatorClipInfo(0)[0];
+
         //一定値その場で長押し状態で射出待機状態
         if (m_touchZone.longpressing && Input.mousePosition == m_touchZone.pressStartPosition){
             m_playerState = PlayerState.Shot;
@@ -55,11 +59,13 @@ public class Player : MonoBehaviour {
         }//入力が何もない場合デフォルト状態
         else if (!m_touchZone.pressing && !m_touchZone.longpressing){
             m_playerState = PlayerState.Deffault;
-            m_animator.Play("Player");
+
+            //プレイヤーが下降中でなければ通常アニメーション
+            if (m_animClip.clip.name != "PlayerBack"){
+                m_animator.Play("Player");
+            }
         }
-
         PlayerAction();
-
     }
 
     private void PlayerAction()
@@ -81,8 +87,6 @@ public class Player : MonoBehaviour {
                 m_spriteRenderer.flipX = true;
                 transform.position -= new Vector3(m_moveSpeed, 0, 0);
             }
-
-            Debug.Log("移動中");
         }
     }
 }
