@@ -112,6 +112,9 @@ public class ExtendBall : MonoBehaviour {
                     m_colGameObject.transform.position = transform.position;
                     transform.position = Vector3.MoveTowards(transform.position, m_player.transform.position, 0.5f);
                     break;
+                case "PassWall":
+                    transform.position = Vector3.MoveTowards(transform.position, m_player.transform.position, 0.5f);
+                    break;
                 default:
                     break;
             }
@@ -140,6 +143,10 @@ public class ExtendBall : MonoBehaviour {
                 shotState = ShotState.back;
                 break;
             case "Monster":
+                m_colGameObject = arg_collision.gameObject;
+                shotState = ShotState.back;
+                break;
+            case "PassWall":
                 m_colGameObject = arg_collision.gameObject;
                 shotState = ShotState.back;
                 break;
