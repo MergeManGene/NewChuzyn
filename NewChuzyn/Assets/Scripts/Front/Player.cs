@@ -29,11 +29,13 @@ public class Player : MonoBehaviour {
 
     private AnimatorClipInfo m_animClip;
 
+    private AudioSource m_audioSource;
 
     private void Start(){
         m_rigidbody2D = GetComponent<Rigidbody2D>();
         m_spriteRenderer = GetComponent<SpriteRenderer>();
         m_animator = GetComponent<Animator>();
+        m_audioSource = GetComponent<AudioSource>();
         
     }
 
@@ -73,6 +75,10 @@ public class Player : MonoBehaviour {
         //Move状態時のアクション
         if (m_playerState == PlayerState.Move)
         {
+            if (!m_audioSource.isPlaying){
+                m_audioSource.Play();
+            }
+
             Vector2 currentTouchPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Vector2 touchStartPos = Camera.main.ScreenToWorldPoint(m_touchZone.pressStartPosition);
 
@@ -88,5 +94,8 @@ public class Player : MonoBehaviour {
                 transform.position -= new Vector3(m_moveSpeed, 0, 0);
             }
         }
+
+        if (m_playerState == PlayerState.Deffault)
+            m_audioSource.Stop();
     }
 }

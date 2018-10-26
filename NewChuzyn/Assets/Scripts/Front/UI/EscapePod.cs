@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class EscapePod : MonoBehaviour {
 
+    [SerializeField]
+    private GameManager m_gameManager;
+
     private Animator m_animator;
 
     /// <summary>当たったオブジェクト</summary>
@@ -15,11 +18,16 @@ public class EscapePod : MonoBehaviour {
 
     private Vector3 m_movePower;
 
-	// Use this for initialization
-	void Start () {
+    private AudioSource m_audioSource;
+
+    private bool Playing;
+
+    // Use this for initialization
+    void Start () {
         m_rigidbody2D = GetComponent<Rigidbody2D>();
         m_animator = GetComponent<Animator>();
         m_movePower = new Vector3(0, 5f, 0);
+        m_audioSource = GetComponent<AudioSource>();
 	}
 
     //プレイヤーと衝突したときアニメーション開始
@@ -39,8 +47,16 @@ public class EscapePod : MonoBehaviour {
     }
 
     //上へ上昇
-   private void MovePod(){
+    private void MovePod()
+    {
         m_rigidbody2D.AddForce(m_movePower, ForceMode2D.Force);
+        if (!Playing)
+        {
+            if (!m_audioSource.isPlaying)
+                m_audioSource.Play();
+            Playing = true;
+            m_gameManager.Clearing = true;
+        }
     }
 
     private void Update(){

@@ -9,6 +9,12 @@ public class Paipu : MonoBehaviour {
 
     private Animator m_playerAnimator;
 
+    private AudioSource m_audioSource;
+
+    private void Start(){
+        m_audioSource = GetComponent<AudioSource>();
+    }
+
     private void OnCollisionStay2D(Collision2D arg_col){
         if (arg_col.collider.tag == "Player"){
             m_colGameObject = arg_col.gameObject;
@@ -16,6 +22,9 @@ public class Paipu : MonoBehaviour {
             m_playerAnimator = m_colGameObject.GetComponent<Animator>();
             m_playerAnimator.Play("PlayerBack");
             m_colGameObject.transform.position = new Vector2(transform.position.x, m_colGameObject.transform.position.y);
+
+            if (!m_audioSource.isPlaying)
+                m_audioSource.Play();
         }
             
     }

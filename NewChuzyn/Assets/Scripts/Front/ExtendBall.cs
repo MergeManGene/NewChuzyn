@@ -37,11 +37,11 @@ public class ExtendBall : MonoBehaviour {
     [SerializeField]
     private TouchZone m_touchZone;
 
-
-    private bool MovingBall;
+    private AudioSource m_audioSource;
 
     private void Start(){
         m_lineRenderer = GetComponent<LineRenderer>();
+        m_audioSource = GetComponent<AudioSource>();
         
         //開始時はデフォルト状態
         shotState = ShotState.def;
@@ -78,6 +78,9 @@ public class ExtendBall : MonoBehaviour {
 
             //向いている方向に向かって移動
             transform.position += angleVec * Time.deltaTime;
+
+            if (!m_audioSource.isPlaying)
+                m_audioSource.Play();
         }
 
         //指が離されたら通常に戻る

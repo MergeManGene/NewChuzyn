@@ -9,12 +9,20 @@ public class Switch : MonoBehaviour {
 
     private SpriteRenderer m_spriteRenderer;
 
+    private AudioSource m_audioSource;
+
     private void Start(){
         m_spriteRenderer = GetComponent<SpriteRenderer>();
+        m_audioSource = GetComponent<AudioSource>();
     }
 
     //スイッチ押されたら赤くなる
     private　void PushSwich(){
+        if (!m_audioSource.isPlaying)
+        {
+            m_audioSource.Play();
+        }
+
         pushing = true;
         m_spriteRenderer.color = Color.red;
     }

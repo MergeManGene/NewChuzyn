@@ -5,21 +5,21 @@ using UnityEngine;
 public class Button : MonoBehaviour {
     public GameObject doa;
     private AudioSource se01;
+
+    private bool Playing;
+
     void Start () {
         se01 = GetComponent<AudioSource>();
     }
 	
-	// Update is called once per frame
-	void Update () {
-        
-    }
 
-    void OnTriggerEnter2D(Collider2D collision)
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        if (!Playing){
             se01.Play();
             Destroy(doa);
-            Debug.Log("へい");
-    
+            Playing = true;
+        }
     }
 }
