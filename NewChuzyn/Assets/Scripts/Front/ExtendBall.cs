@@ -57,9 +57,10 @@ public class ExtendBall : MonoBehaviour {
                 shotState = ShotState.shot;
     }
 
+    /// <summary>
+    /// ボール射出用
+    /// </summary>
     private void BallShot(){
-
-        //フリックされたら射出
         if (m_touchZone.flicking){
 
             m_startPostion = Camera.main.ScreenToWorldPoint(m_touchZone.pressStartPosition);
@@ -88,7 +89,9 @@ public class ExtendBall : MonoBehaviour {
             shotState = ShotState.def;
     }
 
-    //何かに衝突した際の動作
+    /// <summary>
+    /// 衝突した際の動作
+    /// </summary>
     private void BackBall(){
         switch (m_colGameObject.tag)
         {
@@ -100,6 +103,11 @@ public class ExtendBall : MonoBehaviour {
             case "Wall":
                 m_player.transform.position = Vector3.MoveTowards(m_player.transform.position, m_hitPositon, 0.5f);
                 break;
+            //モンスターに当たったらくっつけて戻ってくる
+            case "Monster":
+                m_colGameObject.transform.position = transform.position;
+                transform.position = Vector3.MoveTowards(transform.position, m_player.transform.position, 0.5f);
+                break;
             default:
                 break;
         }
@@ -108,6 +116,10 @@ public class ExtendBall : MonoBehaviour {
             shotState = ShotState.def;
     }
 
+    /// <summary>
+    /// ボールのオブジェクト格納と状態遷移
+    /// </summary>
+    /// <param name="arg_collision"></param>
     private void OnTriggerEnter2D(Collider2D arg_collision){
         m_hitPositon = transform.position;
         switch (arg_collision.tag){
@@ -119,13 +131,16 @@ public class ExtendBall : MonoBehaviour {
                 m_colGameObject = arg_collision.gameObject;
                 shotState = ShotState.back;
                 break;
+            case "Monster":
+                m_colGameObject = arg_collision.gameObject;
+                shotState = ShotState.back;
+                break;
             default:
                 break;
         }          
     }
 
 
-    // Update is called once per frame
     void Update () {
         m_lineRenderer.SetPosition(0, m_player.transform.position);
         m_lineRenderer.SetPosition(1, transform.position);

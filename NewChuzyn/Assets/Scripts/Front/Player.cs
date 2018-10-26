@@ -45,7 +45,9 @@ public class Player : MonoBehaviour {
         Debug.Log(m_playerState);
     }
 
-    //各状態のプレイヤーアクション
+    /// <summary>
+    /// 各状態のプレイヤーアクション
+    /// </summary>
     private void CurrentPlayerAction(){
 
         //現在再生されてるアニメーション取得
@@ -57,21 +59,19 @@ public class Player : MonoBehaviour {
         }//プレスのみの場合は通常移動
         else if (m_touchZone.pressing && !m_touchZone.longpressing){
             m_playerState = PlayerState.Move;
-            m_animator.Play("PlayerMove");
+
         }//入力が何もない場合デフォルト状態
         else if (!m_touchZone.pressing && !m_touchZone.longpressing){
             m_playerState = PlayerState.Deffault;
-
-            //プレイヤーが下降中でなければ通常アニメーション
-            if (m_animClip.clip.name != "PlayerBack"){
-                m_animator.Play("Player");
-            }
         }
         PlayerAction();
     }
 
     private void PlayerAction()
     {
+        //アニメーション開始
+        PlayerAnimation();
+
         //Move状態時のアクション
         if (m_playerState == PlayerState.Move)
         {
@@ -97,5 +97,47 @@ public class Player : MonoBehaviour {
 
         if (m_playerState == PlayerState.Deffault)
             m_audioSource.Stop();
+    }
+
+    /// <summary>
+    /// アニメーション再生
+    /// </summary>
+    private void PlayerAnimation(){
+
+        //プレイヤーがノーマル状態
+        if (GameManager.PlayerFormInstanse == GameManager.PlayerFormState.Normal){
+            //Move状態時のアニメーション
+            if (m_playerState == PlayerState.Move){
+                m_animator.Play("PlayerMove");
+            }
+
+            if (m_playerState == PlayerState.Deffault){
+                //プレイヤーが下降中でなければ通常アニメーション
+                if (m_animClip.clip.name != "PlayerBack"){
+                    m_animator.Play("Player");
+                }
+            }
+        }
+
+        //プレイヤーが幽霊状態時のアニメーション
+        if (GameManager.PlayerFormInstanse == GameManager.PlayerFormState.Ghost){
+            if (m_playerState == PlayerState.Deffault){
+                m_animator.Play("PlayerGhost");               
+            }
+            //Move状態時のアニメーション
+            if (m_playerState == PlayerState.Move){
+                m_animator.Play("PlayerGhostMove");
+            }
+        }
+    }
+    /// <summary>
+    /// プレイヤーが衝突時
+    /// </summary>
+    /// <param name="arg_col"></param>
+    private void OnCollisionEnter2D(Collision2D arg_col){
+        if (arg_col.collider.tag == "Monster"){
+            //プレイヤーを幽霊状態に移行
+            GameManager.PlayerFormInstanse = GameManager.PlayerFormState.Ghost;
+        }
     }
 }

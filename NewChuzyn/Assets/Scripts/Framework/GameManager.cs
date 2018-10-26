@@ -6,10 +6,18 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour {
 
     /// <summary>
-    /// ステージのクリア状況保存用
+    /// ステージのクリア状況
     /// </summary>
     public enum StageState { Stage1,Stage2 }
-    public StageState m_stageState;
+    public StageState stageState;
+    
+    /// <summary>
+    /// プレイヤーの形態状況
+    /// </summary>
+    public enum PlayerFormState { Normal,Ghost};
+    public static PlayerFormState PlayerFormInstanse;
+
+
 
     /// <summary>ステージクリアフラグ</summary>
     public bool Clearing;
@@ -22,7 +30,7 @@ public class GameManager : MonoBehaviour {
 
 
     private void StageClear(){
-        if (m_stageState == StageState.Stage1 && Clearing){
+        if (stageState == StageState.Stage1 && Clearing){
             ClearFirst();
         }      
     }
@@ -35,10 +43,15 @@ public class GameManager : MonoBehaviour {
         }
     }
 
+    /// <summary>
+    /// NextStageボタン呼び出し用
+    /// </summary>
     public void NextStage(){
         Debug.Log("次のシーンへ移行する");
     }
-
+    /// <summary>
+    /// TitleBackボタン呼び出し用
+    /// </summary>
     public void BackTitle(){
         Debug.Log("タイトルへ移行する");
     }
