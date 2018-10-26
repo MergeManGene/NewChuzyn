@@ -140,7 +140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72bb573c0d1bcb84dbc0dfa9c2e25239, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_stageState: 0
+  stageState: 0
   Clearing: 0
   m_clearEffect:
   - {fileID: 1003420335512910, guid: 0247714503e56c64aa6a61a0a8453c53, type: 2}
@@ -403,10 +403,6 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1195180672}
-    - target: {fileID: 1788325003710488, guid: 0247714503e56c64aa6a61a0a8453c53, type: 2}
-      propertyPath: m_Name
-      value: NextButton
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0247714503e56c64aa6a61a0a8453c53, type: 2}
   m_IsPrefabAsset: 0
