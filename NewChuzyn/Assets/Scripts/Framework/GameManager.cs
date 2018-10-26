@@ -28,7 +28,6 @@ public class GameManager : MonoBehaviour {
 
     private GameObject m_clearObject;
 
-
     private void StageClear(){
         if (stageState == StageState.Stage1 && Clearing){
             ClearFirst();
@@ -47,13 +46,23 @@ public class GameManager : MonoBehaviour {
     /// NextStageボタン呼び出し用
     /// </summary>
     public void NextStage(){
-       // SceneManager.LoadScene("Title");
+        if (stageState == StageState.Stage1){
+            FadeManager.Instance.LoadScene("Story1",1f);
+            stageState = StageState.Stage2;
+        }
     }
     /// <summary>
     /// TitleBackボタン呼び出し用
     /// </summary>
     public void BackTitle(){
         FadeManager.Instance.LoadScene("Title", 0.5f);
+    }
+
+    /// <summary>
+    /// TitleBackボタン呼び出し用
+    /// </summary>
+    public void Ending(){
+        FadeManager.Instance.LoadScene("Ending", 1f);
     }
     private void Update(){
         StageClear();
