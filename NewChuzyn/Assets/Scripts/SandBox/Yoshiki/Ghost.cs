@@ -86,6 +86,7 @@ public class Ghost : MonoBehaviour {
         }
     }
 
+    //プレイヤーと衝突時は消滅
     private void OnTriggerEnter2D(Collider2D arg_col){
         if (arg_col.tag == "Player"){
             Destroy(this.gameObject);

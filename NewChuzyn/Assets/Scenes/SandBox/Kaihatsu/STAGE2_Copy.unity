@@ -3832,6 +3832,7 @@ GameObject:
   - component: {fileID: 1250036754}
   - component: {fileID: 1250036753}
   - component: {fileID: 1250036755}
+  - component: {fileID: 1250036756}
   m_Layer: 0
   m_Name: PassWall
   m_TagString: PassWall
@@ -4528,6 +4529,17 @@ TilemapCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+--- !u!114 &1250036756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1250036751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22afd1dfb01c0474fba4fcf6ba5203b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1252316854
 GameObject:
   m_ObjectHideFlags: 0

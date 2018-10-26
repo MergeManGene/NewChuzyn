@@ -93,24 +93,32 @@ public class ExtendBall : MonoBehaviour {
     /// 衝突した際の動作
     /// </summary>
     private void BackBall(){
-        switch (m_colGameObject.tag)
+
+        //コライダーオブジェクト格納時
+        if (m_colGameObject)
         {
-            //地形に当たったら戻ってくる
-            case "Ground":
-                transform.position = Vector3.MoveTowards(transform.position, m_player.transform.position, 0.5f);
-                break;
-            //壁に当たったらその座標に移動する
-            case "Wall":
-                m_player.transform.position = Vector3.MoveTowards(m_player.transform.position, m_hitPositon, 0.5f);
-                break;
-            //モンスターに当たったらくっつけて戻ってくる
-            case "Monster":
-                m_colGameObject.transform.position = transform.position;
-                transform.position = Vector3.MoveTowards(transform.position, m_player.transform.position, 0.5f);
-                break;
-            default:
-                break;
+            switch (m_colGameObject.tag)
+            {
+                //地形に当たったら戻ってくる
+                case "Ground":
+                    transform.position = Vector3.MoveTowards(transform.position, m_player.transform.position, 0.5f);
+                    break;
+                //壁に当たったらその座標に移動する
+                case "Wall":
+                    m_player.transform.position = Vector3.MoveTowards(m_player.transform.position, m_hitPositon, 0.5f);
+                    break;
+                //モンスターに当たったらくっつけて戻ってくる
+                case "Monster":
+                    m_colGameObject.transform.position = transform.position;
+                    transform.position = Vector3.MoveTowards(transform.position, m_player.transform.position, 0.5f);
+                    break;
+                default:
+                    break;
+            }
         }
+        //コライダーオブジェクト消失時はそのままプレイヤーの位置へ戻る
+        else {transform.position = Vector3.MoveTowards(transform.position, m_player.transform.position, 0.5f);}
+        
         //プレイヤーの位置まで戻ったら通常時に移行
         if (transform.position == m_player.transform.position)
             shotState = ShotState.def;
