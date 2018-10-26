@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: f3ecc33920a7d56428982cbf0f00e96a
+=======
+guid: 2971b1c05a995854f818dba3b656e6ad
+>>>>>>> origin/feature/issue/inagaki
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
