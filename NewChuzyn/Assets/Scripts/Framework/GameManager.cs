@@ -47,13 +47,13 @@ public class GameManager : MonoBehaviour {
     /// NextStageボタン呼び出し用
     /// </summary>
     public void NextStage(){
-        Debug.Log("次のシーンへ移行する");
+       // SceneManager.LoadScene("Title");
     }
     /// <summary>
     /// TitleBackボタン呼び出し用
     /// </summary>
     public void BackTitle(){
-        Debug.Log("タイトルへ移行する");
+        FadeManager.Instance.LoadScene("Title", 0.5f);
     }
     private void Update(){
         StageClear();

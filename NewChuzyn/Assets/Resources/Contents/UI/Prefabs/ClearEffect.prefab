@@ -176,7 +176,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u30B2\u30FC\u30E0\u3092\u3084\u3081\u308B"
+  m_Text: "\u30BF\u30A4\u30C8\u30EB\u306B\u623B\u308B"
 --- !u!114 &114425255678402054
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -264,8 +264,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: NextStage
+      - m_Target: {fileID: 114757595313807934, guid: 6c35e5277ef71794ea4a97e5edf62d16,
+          type: 2}
+        m_MethodName: BackTitle
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -379,12 +380,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: 
+      - m_Target: {fileID: 114757595313807934, guid: 6c35e5277ef71794ea4a97e5edf62d16,
+          type: 2}
+        m_MethodName: NextStage
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
