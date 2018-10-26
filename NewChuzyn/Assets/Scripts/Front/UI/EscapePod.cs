@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class EscapePod : MonoBehaviour {
 
+    [SerializeField]
+    private GameManager m_gameManager;
+
     private Animator m_animator;
 
     /// <summary>当たったオブジェクト</summary>
@@ -52,6 +55,7 @@ public class EscapePod : MonoBehaviour {
             if (!m_audioSource.isPlaying)
                 m_audioSource.Play();
             Playing = true;
+            m_gameManager.Clearing = true;
         }
     }
 
