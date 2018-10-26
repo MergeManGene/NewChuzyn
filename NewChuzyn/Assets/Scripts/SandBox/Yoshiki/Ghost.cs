@@ -85,4 +85,10 @@ public class Ghost : MonoBehaviour {
             yield return new WaitForSeconds(1f);
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D arg_col){
+        if (arg_col.tag == "Player"){
+            Destroy(this.gameObject);
+        }
+    }
 }

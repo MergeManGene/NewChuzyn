@@ -113,6 +113,36 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &11683855 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1233827665969492, guid: c47c24528468e0f4381dd774409fcffa,
+    type: 2}
+  m_PrefabInternal: {fileID: 432275832}
+--- !u!61 &11683860
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 11683855}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.1219512, y: 1.1219512}
+    newSize: {x: 1.1219512, y: 1.1219512}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.1219512, y: 1.1219512}
+  m_EdgeRadius: 0
 --- !u!4 &72357120 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4554231991594430, guid: c47c24528468e0f4381dd774409fcffa,
@@ -1300,6 +1330,10 @@ Prefab:
       propertyPath: m_speed
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 1233827665969492, guid: c47c24528468e0f4381dd774409fcffa, type: 2}
+      propertyPath: m_TagString
+      value: Monster
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c47c24528468e0f4381dd774409fcffa, type: 2}
   m_IsPrefabAsset: 0
@@ -1355,6 +1389,10 @@ Prefab:
         type: 2}
       propertyPath: m_distance
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1233827665969492, guid: c47c24528468e0f4381dd774409fcffa, type: 2}
+      propertyPath: m_TagString
+      value: Monster
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c47c24528468e0f4381dd774409fcffa, type: 2}
@@ -1607,11 +1645,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4554231991594430, guid: c47c24528468e0f4381dd774409fcffa, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -24.660114
+      value: -25.61
       objectReference: {fileID: 0}
     - target: {fileID: 4554231991594430, guid: c47c24528468e0f4381dd774409fcffa, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 7.139825
+      value: 10.44
       objectReference: {fileID: 0}
     - target: {fileID: 4554231991594430, guid: c47c24528468e0f4381dd774409fcffa, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1641,6 +1679,10 @@ Prefab:
         type: 2}
       propertyPath: m_speed
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1233827665969492, guid: c47c24528468e0f4381dd774409fcffa, type: 2}
+      propertyPath: m_TagString
+      value: Monster
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c47c24528468e0f4381dd774409fcffa, type: 2}
@@ -2490,6 +2532,36 @@ EdgeCollider2D:
   - {x: -9.15162, y: -4.689756}
   - {x: -8.965312, y: -4.8294873}
   - {x: -8.895912, y: 4.417119}
+--- !u!1 &665095346 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1233827665969492, guid: c47c24528468e0f4381dd774409fcffa,
+    type: 2}
+  m_PrefabInternal: {fileID: 1865848252}
+--- !u!61 &665095351
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 665095346}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.1219512, y: 1.1219512}
+    newSize: {x: 1.1219512, y: 1.1219512}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.1219512, y: 1.1219512}
+  m_EdgeRadius: 0
 --- !u!1 &667511760
 GameObject:
   m_ObjectHideFlags: 0
@@ -2662,6 +2734,36 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4554231991594430, guid: c47c24528468e0f4381dd774409fcffa,
     type: 2}
   m_PrefabInternal: {fileID: 315313972}
+--- !u!1 &734811584 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1233827665969492, guid: c47c24528468e0f4381dd774409fcffa,
+    type: 2}
+  m_PrefabInternal: {fileID: 313764320}
+--- !u!61 &734811589
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 734811584}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.1219512, y: 1.1219512}
+    newSize: {x: 1.1219512, y: 1.1219512}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.1219512, y: 1.1219512}
+  m_EdgeRadius: 0
 --- !u!4 &737067369 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4554231991594430, guid: c47c24528468e0f4381dd774409fcffa,
@@ -3250,9 +3352,73 @@ Prefab:
       propertyPath: m_speed
       value: 0.7
       objectReference: {fileID: 0}
+    - target: {fileID: 1233827665969492, guid: c47c24528468e0f4381dd774409fcffa, type: 2}
+      propertyPath: m_TagString
+      value: Monster
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c47c24528468e0f4381dd774409fcffa, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &1019594380 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1233827665969492, guid: c47c24528468e0f4381dd774409fcffa,
+    type: 2}
+  m_PrefabInternal: {fileID: 315313972}
+--- !u!61 &1019594385
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1019594380}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.1219512, y: 1.1219512}
+    newSize: {x: 1.1219512, y: 1.1219512}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.1219512, y: 1.1219512}
+  m_EdgeRadius: 0
+--- !u!1 &1039156171 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1233827665969492, guid: c47c24528468e0f4381dd774409fcffa,
+    type: 2}
+  m_PrefabInternal: {fileID: 2116088866}
+--- !u!61 &1039156176
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1039156171}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.1219512, y: 1.1219512}
+    newSize: {x: 1.1219512, y: 1.1219512}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.1219512, y: 1.1219512}
+  m_EdgeRadius: 0
 --- !u!1 &1042302807
 GameObject:
   m_ObjectHideFlags: 0
@@ -3412,6 +3578,10 @@ Prefab:
       propertyPath: m_FlipX
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1233827665969492, guid: c47c24528468e0f4381dd774409fcffa, type: 2}
+      propertyPath: m_TagString
+      value: Monster
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c47c24528468e0f4381dd774409fcffa, type: 2}
   m_IsPrefabAsset: 0
@@ -3477,6 +3647,10 @@ Prefab:
         type: 2}
       propertyPath: m_speed
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1233827665969492, guid: c47c24528468e0f4381dd774409fcffa, type: 2}
+      propertyPath: m_TagString
+      value: Monster
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c47c24528468e0f4381dd774409fcffa, type: 2}
@@ -3657,6 +3831,7 @@ GameObject:
   - component: {fileID: 1250036752}
   - component: {fileID: 1250036754}
   - component: {fileID: 1250036753}
+  - component: {fileID: 1250036755}
   m_Layer: 0
   m_Name: PassWall
   m_TagString: PassWall
@@ -4340,6 +4515,19 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!19719996 &1250036755
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1250036751}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
 --- !u!1 &1252316854
 GameObject:
   m_ObjectHideFlags: 0
@@ -56506,11 +56694,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4173695967827726, guid: 2cf90300edbd5c4479ea04037f37fe28, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 59.1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4173695967827726, guid: 2cf90300edbd5c4479ea04037f37fe28, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 4.2
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4173695967827726, guid: 2cf90300edbd5c4479ea04037f37fe28, type: 2}
       propertyPath: m_LocalPosition.z
@@ -56622,6 +56810,36 @@ EdgeCollider2D:
   m_Points:
   - {x: -9.219108, y: -4.462204}
   - {x: -9.127268, y: 4.51458}
+--- !u!1 &1723343144 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1233827665969492, guid: c47c24528468e0f4381dd774409fcffa,
+    type: 2}
+  m_PrefabInternal: {fileID: 967439791}
+--- !u!61 &1723343149
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1723343144}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.1219512, y: 1.1219512}
+    newSize: {x: 1.1219512, y: 1.1219512}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.1219512, y: 1.1219512}
+  m_EdgeRadius: 0
 --- !u!4 &1792142948 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4554231991594430, guid: c47c24528468e0f4381dd774409fcffa,
@@ -73427,6 +73645,10 @@ Prefab:
       propertyPath: m_speed
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1233827665969492, guid: c47c24528468e0f4381dd774409fcffa, type: 2}
+      propertyPath: m_TagString
+      value: Monster
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c47c24528468e0f4381dd774409fcffa, type: 2}
   m_IsPrefabAsset: 0
@@ -73483,6 +73705,10 @@ Prefab:
       propertyPath: m_speed
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1233827665969492, guid: c47c24528468e0f4381dd774409fcffa, type: 2}
+      propertyPath: m_TagString
+      value: Monster
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c47c24528468e0f4381dd774409fcffa, type: 2}
   m_IsPrefabAsset: 0
@@ -73491,6 +73717,36 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4296337441142966, guid: 58e4f97f3e5789341bfcf59ef26977fa,
     type: 2}
   m_PrefabInternal: {fileID: 1423338326}
+--- !u!1 &1952152277 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1233827665969492, guid: c47c24528468e0f4381dd774409fcffa,
+    type: 2}
+  m_PrefabInternal: {fileID: 1901313857}
+--- !u!61 &1952152282
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1952152277}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.1219512, y: 1.1219512}
+    newSize: {x: 1.1219512, y: 1.1219512}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.1219512, y: 1.1219512}
+  m_EdgeRadius: 0
 --- !u!1 &1955779510
 GameObject:
   m_ObjectHideFlags: 0
@@ -73792,9 +74048,49 @@ Prefab:
       propertyPath: m_touchZone
       value: 
       objectReference: {fileID: 352468276}
+    - target: {fileID: 82243116073056340, guid: 78bd19ad23455da4ab19e0c1d26b43ea,
+        type: 2}
+      propertyPath: Loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 82243116073056340, guid: 78bd19ad23455da4ab19e0c1d26b43ea,
+        type: 2}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78bd19ad23455da4ab19e0c1d26b43ea, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &2059148881 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1233827665969492, guid: c47c24528468e0f4381dd774409fcffa,
+    type: 2}
+  m_PrefabInternal: {fileID: 1107980723}
+--- !u!61 &2059148886
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2059148881}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.1219512, y: 1.1219512}
+    newSize: {x: 1.1219512, y: 1.1219512}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.1219512, y: 1.1219512}
+  m_EdgeRadius: 0
 --- !u!1 &2066524194
 GameObject:
   m_ObjectHideFlags: 0
@@ -73873,6 +74169,36 @@ EdgeCollider2D:
   - {x: -9.15162, y: -4.689756}
   - {x: -8.965312, y: -4.8294873}
   - {x: -8.895912, y: 4.417119}
+--- !u!1 &2094794902 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1233827665969492, guid: c47c24528468e0f4381dd774409fcffa,
+    type: 2}
+  m_PrefabInternal: {fileID: 1069059097}
+--- !u!61 &2094794907
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2094794902}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.1219512, y: 1.1219512}
+    newSize: {x: 1.1219512, y: 1.1219512}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.1219512, y: 1.1219512}
+  m_EdgeRadius: 0
 --- !u!1001 &2116088866
 Prefab:
   m_ObjectHideFlags: 0
@@ -73925,6 +74251,10 @@ Prefab:
         type: 2}
       propertyPath: m_speed
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1233827665969492, guid: c47c24528468e0f4381dd774409fcffa, type: 2}
+      propertyPath: m_TagString
+      value: Monster
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c47c24528468e0f4381dd774409fcffa, type: 2}

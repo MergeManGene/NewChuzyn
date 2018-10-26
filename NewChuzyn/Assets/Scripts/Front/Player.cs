@@ -150,6 +150,7 @@ public class Player : MonoBehaviour {
         if (arg_col.tag == "Monster"){
             m_audioSource.clip = m_ghostSE;
             m_audioSource.Play();
+
             //プレイヤーを幽霊状態に移行
             GameManager.PlayerFormInstanse = GameManager.PlayerFormState.Ghost;     
         }
