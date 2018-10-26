@@ -5,6 +5,8 @@ using UnityEngine;
 
     public class JumpStand : MonoBehaviour
     {
+    public enum JumpState { Up,Right}
+    public JumpState jumpState;
 
     [Range(12,24)]
     public float m_jumpPower;
@@ -31,12 +33,20 @@ using UnityEngine;
             if (contact.normal.y <= -1){ HighJump(); }
         }
 
-        void HighJump(){
+    void HighJump()
+    {
         if (!m_audioSource.isPlaying)
             m_audioSource.Play();
-        
 
-        //velocityでジャンプ量を制御
-        m_colObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0, m_jumpPower);
+
+        if (jumpState == JumpState.Up){
+            //velocityでジャンプ量を制御
+            m_colObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0, m_jumpPower);
         }
+
+        if (jumpState == JumpState.Right){
+            m_colObject.GetComponent<Rigidbody2D>().velocity = new Vector2(5, m_jumpPower);
+
+        }
+    }
     }
