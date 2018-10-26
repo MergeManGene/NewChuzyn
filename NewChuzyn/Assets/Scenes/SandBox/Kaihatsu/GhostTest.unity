@@ -727,7 +727,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -885,10 +885,10 @@ Prefab:
       propertyPath: m_touchZone
       value: 
       objectReference: {fileID: 1796906313}
-    - target: {fileID: 212356807394175742, guid: 2cf90300edbd5c4479ea04037f37fe28,
+    - target: {fileID: 82382627846400360, guid: 2cf90300edbd5c4479ea04037f37fe28,
         type: 2}
-      propertyPath: m_SortingOrder
-      value: 1
+      propertyPath: m_PlayOnAwake
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2cf90300edbd5c4479ea04037f37fe28, type: 2}

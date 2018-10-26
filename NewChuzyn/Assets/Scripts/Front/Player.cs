@@ -31,16 +31,21 @@ public class Player : MonoBehaviour {
 
     private AudioSource m_audioSource;
 
+    [SerializeField]
+    private AudioClip m_ghostSE;
+    [SerializeField]
+    private AudioClip m_playerWalk;
+
     private void Start(){
         m_rigidbody2D = GetComponent<Rigidbody2D>();
         m_spriteRenderer = GetComponent<SpriteRenderer>();
         m_animator = GetComponent<Animator>();
-        m_audioSource = GetComponent<AudioSource>();
-        
+        m_audioSource = GetComponent<AudioSource>();      
     }
 
     // Update is called once per frame
     private void Update () {
+
         CurrentPlayerAction();
         Debug.Log(m_playerState);
     }
@@ -75,6 +80,8 @@ public class Player : MonoBehaviour {
         //Move状態時のアクション
         if (m_playerState == PlayerState.Move)
         {
+            m_audioSource.clip = m_playerWalk;
+
             if (!m_audioSource.isPlaying){
                 m_audioSource.Play();
             }
@@ -96,7 +103,12 @@ public class Player : MonoBehaviour {
         }
 
         if (m_playerState == PlayerState.Deffault)
-            m_audioSource.Stop();
+        {
+            //歩く音が流れてたら停止
+            if (m_audioSource.clip == m_playerWalk){
+                m_audioSource.Stop();
+            }
+        }
     }
 
     /// <summary>
@@ -122,7 +134,7 @@ public class Player : MonoBehaviour {
         //プレイヤーが幽霊状態時のアニメーション
         if (GameManager.PlayerFormInstanse == GameManager.PlayerFormState.Ghost){
             if (m_playerState == PlayerState.Deffault){
-                m_animator.Play("PlayerGhost");               
+                m_animator.Play("PlayerGhost");
             }
             //Move状態時のアニメーション
             if (m_playerState == PlayerState.Move){
@@ -134,10 +146,12 @@ public class Player : MonoBehaviour {
     /// プレイヤーが衝突時
     /// </summary>
     /// <param name="arg_col"></param>
-    private void OnCollisionEnter2D(Collision2D arg_col){
-        if (arg_col.collider.tag == "Monster"){
+    private void OnTriggerEnter2D(Collider2D arg_col){
+        if (arg_col.tag == "Monster"){
+            m_audioSource.clip = m_ghostSE;
+            m_audioSource.Play();
             //プレイヤーを幽霊状態に移行
-            GameManager.PlayerFormInstanse = GameManager.PlayerFormState.Ghost;
+            GameManager.PlayerFormInstanse = GameManager.PlayerFormState.Ghost;     
         }
     }
 }
