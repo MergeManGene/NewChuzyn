@@ -211,7 +211,7 @@ MonoBehaviour:
   sendMessageTarget: {fileID: 0}
   useUnityEvents: 0
   layers:
-  - {fileID: 114003814428125874}
+  - {fileID: 0}
 --- !u!114 &114113704591287538
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -302,7 +302,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: TouchScript.Gestures.Gesture+GestureEvent, Assembly-CSharp, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  basicEditor: 1
+  basicEditor: 0
   generalProps: 0
   limitsProps: 0
   advancedProps: 0
@@ -356,7 +356,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_touchZone: {fileID: 114910547245137846}
-  m_player: {fileID: 0}
   m_cursorPrefab: {fileID: 1062582576688004, guid: 270064d86177ca04aa5f4586b88a281e,
     type: 2}
 --- !u!114 &114639709463706524

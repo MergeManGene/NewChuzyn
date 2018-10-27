@@ -77,6 +77,7 @@ public class TouchZone : MonoBehaviour {
     void LongPressedHandle(object arg_sender, System.EventArgs arg_e){
         var send = arg_sender as LongPressGesture;
         longpressing = true;
+
         Debug.Log("長押し");
 
         //長押し中フリックが残っていたらオフ
