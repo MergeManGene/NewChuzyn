@@ -31,6 +31,8 @@ public class Player : MonoBehaviour {
 
     private AudioSource m_audioSource;
 
+    private float longPresslengs;
+
     [SerializeField]
     private AudioClip m_ghostSE;
     [SerializeField]
@@ -58,15 +60,21 @@ public class Player : MonoBehaviour {
         //現在再生されてるアニメーション取得
         m_animClip = m_animator.GetCurrentAnimatorClipInfo(0)[0];
 
+        longPresslengs = Input.mousePosition.x - m_touchZone.pressStartPosition.x;
         //一定値その場で長押し状態で射出待機状態
-        if (m_touchZone.longpressing && Input.mousePosition == m_touchZone.pressStartPosition){
-            m_playerState = PlayerState.Shot;
-        }//プレスのみの場合は通常移動
-        else if (m_touchZone.pressing && !m_touchZone.longpressing){
+        if (m_touchZone.longpressing && longPresslengs < 250 && longPresslengs > -250)
+            {
+                Debug.Log(longPresslengs);
+                m_playerState = PlayerState.Shot;
+            }
+        //プレスのみの場合は通常移動
+        else if (m_touchZone.pressing && !m_touchZone.longpressing)
+        {
             m_playerState = PlayerState.Move;
 
         }//入力が何もない場合デフォルト状態
-        else if (!m_touchZone.pressing && !m_touchZone.longpressing){
+        else if (!m_touchZone.pressing && !m_touchZone.longpressing)
+        {
             m_playerState = PlayerState.Deffault;
         }
         PlayerAction();
