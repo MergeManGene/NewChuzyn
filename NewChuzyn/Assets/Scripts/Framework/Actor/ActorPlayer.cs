@@ -12,11 +12,11 @@ public class ActorPlayer : ActorBase
     //現在のステート
     public IPlayerState m_currentState;
 
-    protected TouchZone m_tt;
+    protected TouchZone m_touchZone;
 
     public override void Init()
     {
-        m_tt = GameObject.Find("TotchZone").GetComponent<TouchZone>();
+        m_touchZone = GameObject.Find("TouchZone").GetComponent<TouchZone>();
     }
 
 

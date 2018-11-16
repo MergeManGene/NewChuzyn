@@ -10,12 +10,12 @@ public class PlayerView : MonoBehaviour {
     public void Init(IPlayer arg_player){
         m_animator = GetComponent<Animator>();
         m_spriteRenderer = GetComponent<SpriteRenderer>();
+        Debug.Log("nna");
     }
 
     public void UpdateByFrame(IPlayer arg_player){
         ViewDirection(arg_player.m_direction);
         ViewStateAnimation(arg_player.m_currentState);
-    
     }
 
     /// <summary>
