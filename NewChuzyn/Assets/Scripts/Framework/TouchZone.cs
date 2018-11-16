@@ -32,6 +32,7 @@ public class TouchZone : MonoBehaviour {
         GetComponent<ReleaseGesture>().Released += ReleasedHandle;
         GetComponent<LongPressGesture>().LongPressed += LongPressedHandle;
         GetComponent<FlickGesture>().Flicked += FlickedHandle;
+
     }
 
     private void OnDisable(){
@@ -44,11 +45,14 @@ public class TouchZone : MonoBehaviour {
 
     void UnsubscribeEvent(){
         // 登録を解除
+
+
         GetComponent<PressGesture>().Pressed += PressedHandle;
         GetComponent<TapGesture>().Tapped += TapeedHandle;
         GetComponent<ReleaseGesture>().Released += ReleasedHandle;
         GetComponent<LongPressGesture>().LongPressed += LongPressedHandle;
         GetComponent<FlickGesture>().Flicked += FlickedHandle;
+
     }
 
     //タップ処理

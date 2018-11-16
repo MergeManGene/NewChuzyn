@@ -680,6 +680,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 622aa3012ba2cdf428eebf7866668a12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jumpState: 0
   m_jumpPower: 18
   m_jumpSE: {fileID: 8300000, guid: 8e7352067439fe044b8bbd9cf1db0106, type: 3}
 --- !u!61 &128309366
@@ -7525,6 +7526,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doa: {fileID: 1389813911}
+  hi: {fileID: 0}
+  hy: {fileID: 0}
 --- !u!61 &1234995355
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7915,12 +7918,22 @@ Prefab:
         type: 2}
       propertyPath: _camera
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 990988549}
     - target: {fileID: 114490551714392914, guid: 1774dbfdb89e8434f9cabda90ff1481e,
         type: 2}
       propertyPath: m_player
       value: 
       objectReference: {fileID: 1755278211}
+    - target: {fileID: 114097892481447476, guid: 1774dbfdb89e8434f9cabda90ff1481e,
+        type: 2}
+      propertyPath: layers.Array.data[0]
+      value: 
+      objectReference: {fileID: 1848192823}
+    - target: {fileID: 114003814428125874, guid: 1774dbfdb89e8434f9cabda90ff1481e,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1774dbfdb89e8434f9cabda90ff1481e, type: 2}
   m_IsPrefabAsset: 0
@@ -9211,6 +9224,12 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ebf1e4d842ae3d458ca2c3a2bceeb8d, type: 2}
   m_IsPrefabAsset: 0
+--- !u!114 &1848192823 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114003814428125874, guid: 1774dbfdb89e8434f9cabda90ff1481e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1384636321}
+  m_Script: {fileID: 11500000, guid: bc7fd33c57d694994b0ab9f33fcdcbea, type: 3}
 --- !u!1 &1865954690
 GameObject:
   m_ObjectHideFlags: 0
@@ -9907,6 +9926,46 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &2104483036 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1068144442489074, guid: 2cf90300edbd5c4479ea04037f37fe28,
+    type: 2}
+  m_PrefabInternal: {fileID: 1755278210}
+--- !u!114 &2104483043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2104483036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6be551879cd14d739b0188844ef2c60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnStateChange:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: TouchScript.Gestures.Gesture+GestureEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  basicEditor: 0
+  generalProps: 0
+  limitsProps: 0
+  advancedProps: 0
+  minPointers: 0
+  maxPointers: 0
+  useSendMessage: 0
+  sendStateChangeMessages: 0
+  sendMessageTarget: {fileID: 0}
+  useUnityEvents: 0
+  sendStateChangeEvents: 0
+  requireGestureToFail: {fileID: 0}
+  friendlyGestures: []
+  OnPress:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: TouchScript.Gestures.Gesture+GestureEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  ignoreChildren: 0
 --- !u!1 &2143124863
 GameObject:
   m_ObjectHideFlags: 0

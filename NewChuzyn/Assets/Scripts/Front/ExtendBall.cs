@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TouchScript.Gestures;
 
 public class ExtendBall : MonoBehaviour {
     public enum ShotState {def,shot,back };
@@ -172,4 +173,7 @@ public class ExtendBall : MonoBehaviour {
             this.gameObject.SetActive(false);
         }
     }
+
+
+
 }
