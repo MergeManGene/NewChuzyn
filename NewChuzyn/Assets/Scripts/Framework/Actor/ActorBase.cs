@@ -10,6 +10,10 @@ public abstract class ActorBase : MonoBehaviour {
 
     //以下全キャラクター共通ステータス
 
+    //移動速度
+    public float m_moveSpeed;
+
+    //向き
     public enum Direction{
         Left = -1,
         Right = 1

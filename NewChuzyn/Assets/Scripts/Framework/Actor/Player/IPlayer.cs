@@ -10,7 +10,6 @@ public class IPlayer : ActorPlayer {
         base.Init();
 
         m_view = GetComponent<PlayerView>();
-        Debug.Log(m_view);
         m_view.Init(this);
 
         this.StateTransion(new PlayerIdle());

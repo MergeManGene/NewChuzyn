@@ -12,7 +12,8 @@ public class ActorPlayer : ActorBase
     //現在のステート
     public IPlayerState m_currentState;
 
-    protected TouchZone m_touchZone;
+    //インプット情報
+    public TouchZone m_touchZone;
 
     public override void Init()
     {

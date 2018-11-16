@@ -17,6 +17,12 @@ public class PlayerIdle : IPlayerState {
     /// </summary>
     /// <param name="arg_player">Argument player.</param>
     public void OnUpdate(ActorPlayer arg_player){
+
+        //ステート検証用
+        //タップ時にステート変更　値は適当
+        if(arg_player.m_touchZone.pressing){
+            arg_player.StateTransion(new PlayerRun());
+        }
     
     }
 

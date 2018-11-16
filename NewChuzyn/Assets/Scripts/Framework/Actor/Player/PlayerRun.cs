@@ -18,7 +18,14 @@ public class PlayerRun : IPlayerState {
     /// </summary>
     /// <param name="m_player">M player.</param>
     public void OnUpdate(ActorPlayer m_player){
+        if(m_player.m_touchZone.pressing){
 
+            //ここでスピードは書いちゃダメです
+            m_player.m_moveSpeed = 0.1f;
+
+            m_player.transform.position += 
+                new Vector3(m_player.m_moveSpeed, 0, 0);
+        }
     }
 
     /// <summary>
