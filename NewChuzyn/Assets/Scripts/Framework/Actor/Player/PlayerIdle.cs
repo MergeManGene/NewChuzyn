@@ -18,9 +18,16 @@ public class PlayerIdle : IPlayerState {
     /// <param name="arg_player">Argument player.</param>
     public void OnUpdate(ActorPlayer arg_player){
 
+        float m_length;
+
+        Vector2 currentTouchPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 touchStartPos = Camera.main.ScreenToWorldPoint(arg_player.m_touchZone.pressStartPosition);
+
+        m_length = touchStartPos.x - currentTouchPos.x;
+
         //ステート検証用
         //タップ時にステート変更　値は適当
-        if(arg_player.m_touchZone.pressing){
+        if (arg_player.m_touchZone.pressing){
             arg_player.StateTransion(new PlayerRun());
         }
     
