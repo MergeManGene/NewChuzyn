@@ -18,6 +18,12 @@ public class IPlayer : ActorPlayer {
     public override void UpdateByFrame(){
         m_currentState.OnUpdate(this);
 
+        //
+        if (!m_touchZone.pressing)
+        {
+            m_currentState = new PlayerIdle();
+        }
+
         //描画処理
         View();
     }
@@ -41,5 +47,6 @@ public class IPlayer : ActorPlayer {
     /// </summary>
     private void Update(){
         UpdateByFrame();
+        Debug.Log(m_currentState);
     }
 } 

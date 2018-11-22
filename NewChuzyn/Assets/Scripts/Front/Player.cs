@@ -68,7 +68,7 @@ public class Player : MonoBehaviour
 
         longPresslengs = Input.mousePosition.x - m_touchZone.pressStartPosition.x;
         //一定値その場で長押し状態で射出待機状態
-        if (m_touchZone.longpressing && longPresslengs < 250 && longPresslengs > -250)
+        if (m_touchZone.longpressing && longPresslengs < 100 && longPresslengs > -100)
         {
             Debug.Log(longPresslengs);
             m_playerState = PlayerState.Shot;

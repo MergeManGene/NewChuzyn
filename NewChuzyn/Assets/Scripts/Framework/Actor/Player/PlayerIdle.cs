@@ -18,19 +18,18 @@ public class PlayerIdle : IPlayerState {
     /// <param name="arg_player">Argument player.</param>
     public void OnUpdate(ActorPlayer arg_player){
 
-        float m_length;
 
-        Vector2 currentTouchPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Vector2 touchStartPos = Camera.main.ScreenToWorldPoint(arg_player.m_touchZone.pressStartPosition);
-
-        m_length = touchStartPos.x - currentTouchPos.x;
-
-        //ステート検証用
-        //タップ時にステート変更　値は適当
-        if (arg_player.m_touchZone.pressing){
-            arg_player.StateTransion(new PlayerRun());
+        if (!arg_player.m_touchZone.pressing && !arg_player.m_touchZone.longpressing)
+        {
+            arg_player.StateTransion(new PlayerIdle());
         }
-    
+
+        //プレスのみの場合は通常移動
+        else if (arg_player.m_touchZone.pressing)
+        {
+            arg_player.StateTransion(new PlayerRun());
+        }//入力が何もない場合デフォルト状態
+        
     }
 
     /// <summary>

@@ -66,7 +66,8 @@ public class TouchZone : MonoBehaviour {
     void ReleasedHandle(object arg_sender, System.EventArgs arg_e){
         inputstate = InputState.Release;
         Debug.Log("リリース");
-        pressing = longpressing = tapping = false;
+        pressing = false;
+        longpressing = tapping = false;
     }
 
     void TapeedHandle(object arg_sender, System.EventArgs arg_e){

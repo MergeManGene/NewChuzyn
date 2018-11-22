@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public interface IPlayerState  {
+
     /// <summary>
     /// ステート開始時に呼ばれる処理
     /// </summary>

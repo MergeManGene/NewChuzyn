@@ -2,14 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerRun : IPlayerState {
-
+public class PlayerRun : IPlayerState
+{
 
     /// <summary>
     /// ステート開始時の処理
     /// </summary>
     /// <param name="arg_player">Argument player.</param>
-    public void OnEnter(ActorPlayer arg_player){
+    public void OnEnter(ActorPlayer arg_player)
+    {
 
     }
 
@@ -17,22 +18,55 @@ public class PlayerRun : IPlayerState {
     /// 毎フレーム呼ばれる処理
     /// </summary>
     /// <param name="m_player">M player.</param>
-    public void OnUpdate(ActorPlayer m_player){
-        if(m_player.m_touchZone.pressing){
+    public void OnUpdate(ActorPlayer arg_player)
+    {
+
+        if (arg_player.m_touchZone.pressing){
+
+            float m_length;
+            float m_triggerLength = 2f;
+
+            float longPresslengs;
+            longPresslengs = Input.mousePosition.x - arg_player.m_touchZone.pressStartPosition.x;
+
+
+            Vector2 currentTouchPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Vector2 touchStartPos = Camera.main.ScreenToWorldPoint(arg_player.m_touchZone.pressStartPosition);
+
+            m_length = touchStartPos.x - currentTouchPos.x;
 
             //ここでスピードは書いちゃダメです
-            m_player.m_moveSpeed = 0.1f;
+            arg_player.m_moveSpeed = 0.1f;
 
-            m_player.transform.position += 
-                new Vector3(m_player.m_moveSpeed, 0, 0);
+            //一定値その場で長押し状態で射出待機状態
+            if (arg_player.m_touchZone.longpressing && longPresslengs < 100 && longPresslengs > -100)
+            {
+                Debug.Log("射出");
+            }
+
+            //一定値以上スワイプしたら移動開始
+            if (m_length < -m_triggerLength){
+                arg_player.transform.position += new Vector3(arg_player.m_moveSpeed, 0, 0);
+                arg_player.m_direction = ActorBase.Direction.Right;
+            }
+            if (m_length > m_triggerLength){
+                arg_player.transform.position -= new Vector3(arg_player.m_moveSpeed, 0, 0);
+                arg_player.m_direction = ActorBase.Direction.Left;
+            }
+        }
+        //指を離したら通常に戻る
+    //   else{
+      //      arg_player.StateTransion(new PlayerIdle());
+      //  }
+    }
+        /// <summary>
+        /// ステート終了時に呼ばれる処理
+        /// </summary>
+        /// <param name="arg_player">M player.</param>
+        public void OnExit(ActorPlayer arg_player)
+        {
+
         }
     }
 
-    /// <summary>
-    /// ステート終了時に呼ばれる処理
-    /// </summary>
-    /// <param name="m_player">M player.</param>
-    public void OnExit(ActorPlayer m_player){
 
-    }
-}
