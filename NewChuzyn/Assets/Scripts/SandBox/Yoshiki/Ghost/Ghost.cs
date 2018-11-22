@@ -42,9 +42,6 @@ public class Ghost : MonoBehaviour {
         m_position = transform.position;
 	}
 	
-	private void Update () {
-        
-	}
 
     private IEnumerator MoveSide()
     {
@@ -79,7 +76,7 @@ public class Ghost : MonoBehaviour {
             }
             else if (m_position.y + m_distance > transform.position.y)
             {
-                m_rigidbody2d.velocity -= (Vector2.down * m_speed);
+                m_rigidbody2d.velocity += (Vector2.up * m_speed);
             }
 
             yield return new WaitForSeconds(1f);

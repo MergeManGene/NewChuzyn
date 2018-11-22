@@ -9,6 +9,7 @@ TagManager:
   - Rebound
   - PassWall
   - Monster
+  - SearchLight
   layers:
   - Default
   - TransparentFX
