@@ -19,7 +19,9 @@ public class PlayerShot : IPlayerState {
     /// <param name="arg_player"></param>
     public void OnUpdate(ActorPlayer arg_player)
     {
-
+        if(arg_player.m_touchZone.flicking){
+            arg_player.ballObject.StateTransion(new BallShot());
+        }
     }
 
     /// <summary>

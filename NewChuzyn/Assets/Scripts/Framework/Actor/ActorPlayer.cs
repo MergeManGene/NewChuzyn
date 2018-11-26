@@ -15,8 +15,13 @@ public class ActorPlayer : ActorBase
     //インプット情報
     public TouchZone m_touchZone;
 
+    //危険
+    public IBall ballObject;
+
     public override void Init(){
-        m_touchZone = GameObject.Find("TouchZone").GetComponent<TouchZone>();  
+        m_touchZone = GameObject.Find("TouchZone").GetComponent<TouchZone>();
+        ballObject = GameObject.Find("Ball").GetComponent<IBall>();
+    
     }
 
     /// <summary>

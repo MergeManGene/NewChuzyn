@@ -10,9 +10,13 @@ public class ActorBall : BallBase {
     //危険
     public IPlayer playerObject;
 
+    //Player側でも参照している
+    public TouchZone m_touchZone;
+
+
     public override void Init(){
         playerObject = GameObject.Find("Player").GetComponent<IPlayer>();
-
+        m_touchZone = GameObject.Find("TouchZone").GetComponent<TouchZone>();
     }
 
     public void StateTransion(IBallState arg_nextState){

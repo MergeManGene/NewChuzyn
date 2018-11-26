@@ -12,7 +12,7 @@ public class BallView : MonoBehaviour {
         m_spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
-    public void UpdateByFrame(){
+    public void UpdateByFrame(IBall arg_ball){
 
     }
 

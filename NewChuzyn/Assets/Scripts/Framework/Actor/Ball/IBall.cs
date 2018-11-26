@@ -7,9 +7,6 @@ public class IBall : ActorBall {
     //Viewオブジェクトインスタンス
     private BallView m_view { get; set; }
 
-    //危険
-    protected IPlayer m_player;
-
     public override void Init(){
         base.Init();
 
@@ -29,7 +26,7 @@ public class IBall : ActorBall {
     /// 描画処理
     /// </summary>
     private void View(){
-
+        m_view.UpdateByFrame(this);
     }
 
     private void Start(){
