@@ -15,10 +15,8 @@ public class ActorPlayer : ActorBase
     //インプット情報
     public TouchZone m_touchZone;
 
-    public override void Init()
-    {
-        m_touchZone = GameObject.Find("TouchZone").GetComponent<TouchZone>();
-    
+    public override void Init(){
+        m_touchZone = GameObject.Find("TouchZone").GetComponent<TouchZone>();  
     }
 
     /// <summary>
@@ -27,7 +25,7 @@ public class ActorPlayer : ActorBase
     /// <param name="arg_nextState">Argument next state.</param>
     public void StateTransion(IPlayerState arg_nextState)
     {
-        //入力がなければ通常状態に以降
+       
         if (m_currentState != null) m_currentState.OnExit(this);
 
         m_currentState = arg_nextState;

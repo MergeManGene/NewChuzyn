@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerRun : IPlayerState
 {
+    //苦肉の策
+    bool moving = false;
 
     /// <summary>
     /// ステート開始時の処理
@@ -20,6 +22,7 @@ public class PlayerRun : IPlayerState
     /// <param name="m_player">M player.</param>
     public void OnUpdate(ActorPlayer arg_player)
     {
+
 
         if (arg_player.m_touchZone.pressing){
 
@@ -41,21 +44,31 @@ public class PlayerRun : IPlayerState
             //一定値その場で長押し状態で射出待機状態
             if (arg_player.m_touchZone.longpressing && longPresslengs < 100 && longPresslengs > -100)
             {
-                Debug.Log("射出");
+                if (!moving)
+                {
+                    arg_player.StateTransion(new PlayerShot());
+                    Debug.Log("射出");
+                }
             }
 
             //一定値以上スワイプしたら移動開始
             if (m_length < -m_triggerLength){
                 arg_player.transform.position += new Vector3(arg_player.m_moveSpeed, 0, 0);
                 arg_player.m_direction = ActorBase.Direction.Right;
+                moving = true;
             }
             if (m_length > m_triggerLength){
                 arg_player.transform.position -= new Vector3(arg_player.m_moveSpeed, 0, 0);
                 arg_player.m_direction = ActorBase.Direction.Left;
+                moving = true;
+            }
+
+            if (!arg_player.m_touchZone.pressing){
+                moving = false;
             }
         }
         //指を離したら通常に戻る
-    //   else{
+      //   else{
       //      arg_player.StateTransion(new PlayerIdle());
       //  }
     }

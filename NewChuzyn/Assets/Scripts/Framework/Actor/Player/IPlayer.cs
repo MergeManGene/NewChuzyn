@@ -18,7 +18,7 @@ public class IPlayer : ActorPlayer {
     public override void UpdateByFrame(){
         m_currentState.OnUpdate(this);
 
-        //
+        //入力がなければ通常状態に以降
         if (!m_touchZone.pressing)
         {
             m_currentState = new PlayerIdle();
