@@ -23,8 +23,7 @@ public class ActorPlayer : ActorBase
     /// プレイヤーのステートを変更する
     /// </summary>
     /// <param name="arg_nextState">Argument next state.</param>
-    public void StateTransion(IPlayerState arg_nextState)
-    {
+    public void StateTransion(IPlayerState arg_nextState){
        
         if (m_currentState != null) m_currentState.OnExit(this);
 

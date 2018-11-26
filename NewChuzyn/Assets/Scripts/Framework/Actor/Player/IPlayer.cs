@@ -19,10 +19,8 @@ public class IPlayer : ActorPlayer {
         m_currentState.OnUpdate(this);
 
         //入力がなければ通常状態に以降
-        if (!m_touchZone.pressing)
-        {
-            m_currentState = new PlayerIdle();
-        }
+        if (!m_touchZone.pressing) m_currentState = new PlayerIdle();
+        
 
         //描画処理
         View();
