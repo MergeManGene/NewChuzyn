@@ -7,9 +7,9 @@ public class NumberOrder : MonoBehaviour {
     [SerializeField]
     private GameObject[] m_objectCount;
 
-    private Number[] m_objectNumber = new Number[5];
-    private Animator[] m_objectAnimator = new Animator[5];
-    private PolygonCollider2D[] m_objectCollider = new PolygonCollider2D[5];
+    private Number[] m_objectNumber = new Number[10];
+    private Animator[] m_objectAnimator = new Animator[10];
+    private PolygonCollider2D[] m_objectCollider = new PolygonCollider2D[10];
 
     private AudioSource m_audioSource;
     [SerializeField]
