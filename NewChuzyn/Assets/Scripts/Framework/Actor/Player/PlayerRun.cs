@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerRun : IPlayerState
 {
     //苦肉の策
-    bool moving = false;
+    private bool moving = false;
 
     /// <summary>
     /// ステート開始時の処理

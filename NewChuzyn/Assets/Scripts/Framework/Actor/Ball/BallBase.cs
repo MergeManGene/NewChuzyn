@@ -20,7 +20,6 @@ public class BallBase : MonoBehaviour {
     /// フレーム更新用関数
     /// </summary>
     public virtual void UpdateByFrame(){
-
+        
     }
-
 }

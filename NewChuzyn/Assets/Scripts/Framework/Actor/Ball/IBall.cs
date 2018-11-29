@@ -36,5 +36,8 @@ public class IBall : ActorBall {
     private void Update()
     {
         UpdateByFrame();
+        Debug.Log("ボールの状態"+m_ballState);
     }
+
+
 }

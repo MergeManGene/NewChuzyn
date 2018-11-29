@@ -22,7 +22,7 @@ public class BallShot : IBallState {
         arg_ball.transform.rotation = Quaternion.Euler(0f, 0f, AngleRotation);
 
         //移動量
-        Vector3 angleVec = arg_ball.transform.rotation * new Vector3(5, 0f, 0);
+        Vector3 angleVec = arg_ball.transform.rotation * new Vector3(20, 0f, 0);
 
         //向いている方向に向かって移動
         arg_ball.transform.position += angleVec * Time.deltaTime;
