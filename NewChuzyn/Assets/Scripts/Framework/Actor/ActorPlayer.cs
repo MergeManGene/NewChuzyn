@@ -13,9 +13,11 @@ public class ActorPlayer : ActorBase
     public IPlayerState m_currentState;
 
     //インプット情報
+    [HideInInspector]
     public TouchZone m_touchZone;
 
     //危険
+    [HideInInspector]
     public IBall ballObject;
 
     public override void Init(){

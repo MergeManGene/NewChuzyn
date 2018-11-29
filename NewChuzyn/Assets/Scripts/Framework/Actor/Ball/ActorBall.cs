@@ -14,6 +14,7 @@ public class ActorBall : BallBase {
     public TouchZone m_touchZone;
 
     //衝突座標
+    [HideInInspector]
     public Vector3 hitPosition;
 
 

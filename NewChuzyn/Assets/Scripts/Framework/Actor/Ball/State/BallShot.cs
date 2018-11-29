@@ -11,6 +11,7 @@ public class BallShot : IBallState {
     public void OnUpdate(ActorBall arg_ball){
 
         Vector3 m_startPostion = Camera.main.ScreenToWorldPoint(arg_ball.m_touchZone.pressStartPosition);
+
         //角度指定
         float zRotation = Mathf.Atan2(arg_ball.m_touchZone.flickEndPosition.y - m_startPostion.y,
                                       arg_ball.m_touchZone.flickEndPosition.x - m_startPostion.x) * Mathf.Rad2Deg;

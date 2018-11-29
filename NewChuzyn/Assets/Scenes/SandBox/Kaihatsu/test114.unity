@@ -768,6 +768,285 @@ EdgeCollider2D:
   m_Points:
   - {x: -16.897568, y: 1.8416283}
   - {x: -12.568474, y: 1.8416269}
+--- !u!1 &685023652
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1315988368787554, guid: 1774dbfdb89e8434f9cabda90ff1481e,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 685023659}
+  - component: {fileID: 900964236}
+  - component: {fileID: 685023658}
+  - component: {fileID: 685023653}
+  - component: {fileID: 685023657}
+  - component: {fileID: 685023656}
+  - component: {fileID: 685023655}
+  - component: {fileID: 685023654}
+  m_Layer: 0
+  m_Name: TouchZone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &685023653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 114910547245137846, guid: 1774dbfdb89e8434f9cabda90ff1481e,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 685023652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48349fa181ded22418d791404af1d44e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputstate: 0
+  pressStartPosition: {x: 0, y: 0, z: 0}
+  flickEndPosition: {x: 0, y: 0, z: 0}
+  pressing: 0
+  releasing: 0
+  tapping: 0
+  longpressing: 0
+  flicking: 0
+--- !u!114 &685023654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 114118811405755828, guid: 1774dbfdb89e8434f9cabda90ff1481e,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 685023652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65c8d97aff62a473e888feae3bec54cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnStateChange:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: TouchScript.Gestures.Gesture+GestureEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  basicEditor: 0
+  generalProps: 0
+  limitsProps: 0
+  advancedProps: 0
+  minPointers: 0
+  maxPointers: 0
+  useSendMessage: 0
+  sendStateChangeMessages: 0
+  sendMessageTarget: {fileID: 0}
+  useUnityEvents: 0
+  sendStateChangeEvents: 0
+  requireGestureToFail: {fileID: 0}
+  friendlyGestures: []
+  OnLongPress:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: TouchScript.Gestures.Gesture+GestureEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  timeToPress: 0.5
+  distanceLimit: Infinity
+--- !u!114 &685023655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 114113801859111654, guid: 1774dbfdb89e8434f9cabda90ff1481e,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 685023652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a878a6ff128243dfb1d89ca0273f059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnStateChange:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: TouchScript.Gestures.Gesture+GestureEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  basicEditor: 1
+  generalProps: 0
+  limitsProps: 0
+  advancedProps: 0
+  minPointers: 0
+  maxPointers: 0
+  useSendMessage: 0
+  sendStateChangeMessages: 0
+  sendMessageTarget: {fileID: 0}
+  useUnityEvents: 0
+  sendStateChangeEvents: 0
+  requireGestureToFail: {fileID: 0}
+  friendlyGestures: []
+  OnTap:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: TouchScript.Gestures.Gesture+GestureEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  numberOfTapsRequired: 1
+  timeLimit: Infinity
+  distanceLimit: Infinity
+  combinePointers: 0
+  combinePointersInterval: 0.3
+--- !u!114 &685023656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 114113704591287538, guid: 1774dbfdb89e8434f9cabda90ff1481e,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 685023652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 141e75b9b7edb42df80a22a14f03ae4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnStateChange:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: TouchScript.Gestures.Gesture+GestureEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  basicEditor: 0
+  generalProps: 0
+  limitsProps: 0
+  advancedProps: 0
+  minPointers: 0
+  maxPointers: 0
+  useSendMessage: 0
+  sendStateChangeMessages: 0
+  sendMessageTarget: {fileID: 0}
+  useUnityEvents: 0
+  sendStateChangeEvents: 0
+  requireGestureToFail: {fileID: 0}
+  friendlyGestures: []
+  OnRelease:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: TouchScript.Gestures.Gesture+GestureEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  ignoreChildren: 0
+--- !u!114 &685023657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 114639709463706524, guid: 1774dbfdb89e8434f9cabda90ff1481e,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 685023652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ba67d04e07d3491989322c6414feaf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnStateChange:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: TouchScript.Gestures.Gesture+GestureEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  basicEditor: 0
+  generalProps: 0
+  limitsProps: 0
+  advancedProps: 0
+  minPointers: 0
+  maxPointers: 0
+  useSendMessage: 0
+  sendStateChangeMessages: 0
+  sendMessageTarget: {fileID: 0}
+  useUnityEvents: 0
+  sendStateChangeEvents: 0
+  requireGestureToFail: {fileID: 0}
+  friendlyGestures: []
+  flickTime: 0.1
+  minDistance: 1
+  movementThreshold: 0.5
+  direction: 0
+--- !u!114 &685023658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 114833623345469874, guid: 1774dbfdb89e8434f9cabda90ff1481e,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 685023652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6be551879cd14d739b0188844ef2c60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnStateChange:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: TouchScript.Gestures.Gesture+GestureEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  basicEditor: 0
+  generalProps: 0
+  limitsProps: 0
+  advancedProps: 0
+  minPointers: 0
+  maxPointers: 0
+  useSendMessage: 0
+  sendStateChangeMessages: 0
+  sendMessageTarget: {fileID: 0}
+  useUnityEvents: 0
+  sendStateChangeEvents: 0
+  requireGestureToFail: {fileID: 0}
+  friendlyGestures: []
+  OnPress:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: TouchScript.Gestures.Gesture+GestureEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  ignoreChildren: 0
+--- !u!4 &685023659
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4256756698907814, guid: 1774dbfdb89e8434f9cabda90ff1481e,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 685023652}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -960.28754, y: -540.44946, z: -0.0044824197}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 685962035}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &685962034
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1765138574916386, guid: 1774dbfdb89e8434f9cabda90ff1481e,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 685962035}
+  m_Layer: 0
+  m_Name: TouchObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &685962035
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 224305310029541936, guid: 1774dbfdb89e8434f9cabda90ff1481e,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 685962034}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1272608058}
+  - {fileID: 1956541436}
+  - {fileID: 685023659}
+  - {fileID: 1634902399}
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 960, y: 540}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &689752425
 GameObject:
   m_ObjectHideFlags: 0
@@ -3969,6 +4248,21 @@ Transform:
   m_Father: {fileID: 1101722917}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &900964236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 114003814428125874, guid: 1774dbfdb89e8434f9cabda90ff1481e,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 685023652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc7fd33c57d694994b0ab9f33fcdcbea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Fullscreen @ Main Camera
+  type: 0
+  _camera: {fileID: 332973568}
 --- !u!1 &1093528862
 GameObject:
   m_ObjectHideFlags: 0
@@ -4244,110 +4538,169 @@ EdgeCollider2D:
   m_Points:
   - {x: -18.774147, y: -3.1117334}
   - {x: -18.737377, y: -8.076138}
+--- !u!1 &1272608057
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1397498917015682, guid: 1774dbfdb89e8434f9cabda90ff1481e,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1272608058}
+  - component: {fileID: 1272608060}
+  - component: {fileID: 1272608059}
+  m_Layer: 0
+  m_Name: TouchManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1272608058
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4382959000030246, guid: 1774dbfdb89e8434f9cabda90ff1481e,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1272608057}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -960, y: -540, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 685962035}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1272608059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 114188671182270818, guid: 1774dbfdb89e8434f9cabda90ff1481e,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1272608057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e276ccba4f7314d9988af19f9b3a611b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  basicEditor: 1
+  generalProps: 0
+  windowsProps: 0
+  webglProps: 0
+  windows8API: 0
+  windows7API: 0
+  webGLTouch: 1
+  windows8Mouse: 1
+  windows7Mouse: 1
+  universalWindowsMouse: 1
+  emulateSecondMousePointer: 1
+--- !u!114 &1272608060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 114097892481447476, guid: 1774dbfdb89e8434f9cabda90ff1481e,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1272608057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dd4c394fe06f4ea49e03aaa5e7a8190, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnFrameStart:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: TouchScript.TouchManager+FrameEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  OnFrameFinish:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: TouchScript.TouchManager+FrameEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  OnPointersAdd:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: TouchScript.TouchManager+PointerEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  OnPointersUpdate:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: TouchScript.TouchManager+PointerEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  OnPointersPress:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: TouchScript.TouchManager+PointerEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  OnPointersRelease:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: TouchScript.TouchManager+PointerEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  OnPointersRemove:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: TouchScript.TouchManager+PointerEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  OnPointersCancel:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: TouchScript.TouchManager+PointerEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  basicEditor: 0
+  displayDevice: {fileID: 0}
+  shouldCreateCameraLayer: 1
+  shouldCreateStandardInput: 1
+  useSendMessage: 0
+  sendMessageEvents: 60
+  sendMessageTarget: {fileID: 0}
+  useUnityEvents: 0
+  layers:
+  - {fileID: 900964236}
 --- !u!1001 &1472648383
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 685962035}
     m_Modifications:
-    - target: {fileID: 224305310029541936, guid: 1774dbfdb89e8434f9cabda90ff1481e,
-        type: 2}
+    - target: {fileID: 4404081767031160, guid: 9b1c4ac381e664aa8b521ee2af093b5d, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -959.30334
       objectReference: {fileID: 0}
-    - target: {fileID: 224305310029541936, guid: 1774dbfdb89e8434f9cabda90ff1481e,
-        type: 2}
+    - target: {fileID: 4404081767031160, guid: 9b1c4ac381e664aa8b521ee2af093b5d, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -535.1399
       objectReference: {fileID: 0}
-    - target: {fileID: 224305310029541936, guid: 1774dbfdb89e8434f9cabda90ff1481e,
-        type: 2}
+    - target: {fileID: 4404081767031160, guid: 9b1c4ac381e664aa8b521ee2af093b5d, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.19970575
       objectReference: {fileID: 0}
-    - target: {fileID: 224305310029541936, guid: 1774dbfdb89e8434f9cabda90ff1481e,
-        type: 2}
+    - target: {fileID: 4404081767031160, guid: 9b1c4ac381e664aa8b521ee2af093b5d, type: 2}
       propertyPath: m_LocalRotation.x
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 224305310029541936, guid: 1774dbfdb89e8434f9cabda90ff1481e,
-        type: 2}
+    - target: {fileID: 4404081767031160, guid: 9b1c4ac381e664aa8b521ee2af093b5d, type: 2}
       propertyPath: m_LocalRotation.y
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 224305310029541936, guid: 1774dbfdb89e8434f9cabda90ff1481e,
-        type: 2}
+    - target: {fileID: 4404081767031160, guid: 9b1c4ac381e664aa8b521ee2af093b5d, type: 2}
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 224305310029541936, guid: 1774dbfdb89e8434f9cabda90ff1481e,
-        type: 2}
+    - target: {fileID: 4404081767031160, guid: 9b1c4ac381e664aa8b521ee2af093b5d, type: 2}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 224305310029541936, guid: 1774dbfdb89e8434f9cabda90ff1481e,
-        type: 2}
+    - target: {fileID: 4404081767031160, guid: 9b1c4ac381e664aa8b521ee2af093b5d, type: 2}
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 224305310029541936, guid: 1774dbfdb89e8434f9cabda90ff1481e,
+    - target: {fileID: 114856896131049244, guid: 9b1c4ac381e664aa8b521ee2af093b5d,
         type: 2}
-      propertyPath: m_AnchoredPosition.x
-      value: 960
-      objectReference: {fileID: 0}
-    - target: {fileID: 224305310029541936, guid: 1774dbfdb89e8434f9cabda90ff1481e,
-        type: 2}
-      propertyPath: m_AnchoredPosition.y
-      value: 540
-      objectReference: {fileID: 0}
-    - target: {fileID: 224305310029541936, guid: 1774dbfdb89e8434f9cabda90ff1481e,
-        type: 2}
-      propertyPath: m_SizeDelta.x
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 224305310029541936, guid: 1774dbfdb89e8434f9cabda90ff1481e,
-        type: 2}
-      propertyPath: m_SizeDelta.y
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 224305310029541936, guid: 1774dbfdb89e8434f9cabda90ff1481e,
-        type: 2}
-      propertyPath: m_AnchorMin.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 224305310029541936, guid: 1774dbfdb89e8434f9cabda90ff1481e,
-        type: 2}
-      propertyPath: m_AnchorMin.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 224305310029541936, guid: 1774dbfdb89e8434f9cabda90ff1481e,
-        type: 2}
-      propertyPath: m_AnchorMax.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 224305310029541936, guid: 1774dbfdb89e8434f9cabda90ff1481e,
-        type: 2}
-      propertyPath: m_AnchorMax.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 224305310029541936, guid: 1774dbfdb89e8434f9cabda90ff1481e,
-        type: 2}
-      propertyPath: m_Pivot.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 224305310029541936, guid: 1774dbfdb89e8434f9cabda90ff1481e,
-        type: 2}
-      propertyPath: m_Pivot.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114003814428125874, guid: 1774dbfdb89e8434f9cabda90ff1481e,
-        type: 2}
-      propertyPath: _camera
+      propertyPath: m_touchZone
       value: 
-      objectReference: {fileID: 332973568}
+      objectReference: {fileID: 685023653}
     m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 1774dbfdb89e8434f9cabda90ff1481e, type: 2}
+  m_SourcePrefab: {fileID: 100100000, guid: 9b1c4ac381e664aa8b521ee2af093b5d, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &1601158654
 GameObject:
@@ -4412,6 +4765,11 @@ EdgeCollider2D:
   m_Points:
   - {x: -19.694904, y: -3.27312}
   - {x: -19.715881, y: -8.1956005}
+--- !u!4 &1634902399 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4404081767031160, guid: 9b1c4ac381e664aa8b521ee2af093b5d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1472648383}
 --- !u!1 &1736117905
 GameObject:
   m_ObjectHideFlags: 0
@@ -4592,6 +4950,84 @@ Transform:
   m_Father: {fileID: 1101722917}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!1 &1956541435
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1778385635451154, guid: 1774dbfdb89e8434f9cabda90ff1481e,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1956541436}
+  - component: {fileID: 1956541438}
+  - component: {fileID: 1956541437}
+  m_Layer: 0
+  m_Name: Cursors
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1956541436
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 224942934585027644, guid: 1774dbfdb89e8434f9cabda90ff1481e,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1956541435}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 685962035}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
+--- !u!223 &1956541437
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 223031562743023338, guid: 1774dbfdb89e8434f9cabda90ff1481e,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1956541435}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 1
+  m_SortingLayerID: 0
+  m_SortingOrder: 32767
+  m_TargetDisplay: 0
+--- !u!114 &1956541438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 114930035574191716, guid: 1774dbfdb89e8434f9cabda90ff1481e,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1956541435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75324aa372886435faa21a4145210f8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorsProps: 0
+  mouseCursor: {fileID: 11416202, guid: a71503570adc6194b9bbc69bf19cc2de, type: 2}
+  touchCursor: {fileID: 11435582, guid: 7fd82b375cf1cdc45b55e2751d814207, type: 2}
+  penCursor: {fileID: 11486812, guid: 7af150e8b98b05449aaf9462bd6c7109, type: 2}
+  objectCursor: {fileID: 11468960, guid: 4230502e1973f4c9e9ef6767dcc8c602, type: 2}
+  useDPI: 1
+  cursorSize: 4
+  cursorPixelSize: 64
 --- !u!1 &2004093132
 GameObject:
   m_ObjectHideFlags: 0
