@@ -739,6 +739,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doa: {fileID: 329505161}
+  hi: {fileID: 0}
+  hy: {fileID: 0}
 --- !u!61 &145131758
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1308,6 +1310,11 @@ Prefab:
     - target: {fileID: 4881151703846460, guid: 6c35e5277ef71794ea4a97e5edf62d16, type: 2}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114757595313807934, guid: 6c35e5277ef71794ea4a97e5edf62d16,
+        type: 2}
+      propertyPath: Clearing
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c35e5277ef71794ea4a97e5edf62d16, type: 2}
@@ -10154,7 +10161,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4173695967827726, guid: 2cf90300edbd5c4479ea04037f37fe28, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 5.28
+      value: 80.3
       objectReference: {fileID: 0}
     - target: {fileID: 4173695967827726, guid: 2cf90300edbd5c4479ea04037f37fe28, type: 2}
       propertyPath: m_LocalPosition.y
