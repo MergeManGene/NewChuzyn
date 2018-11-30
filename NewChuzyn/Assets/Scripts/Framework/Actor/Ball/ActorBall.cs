@@ -17,8 +17,6 @@ public class ActorBall : BallBase {
     [HideInInspector]
     public Vector3 hitPosition;
 
-
-
     //衝突したゲームオブジェクト
     [HideInInspector]
     public GameObject colGameObject;

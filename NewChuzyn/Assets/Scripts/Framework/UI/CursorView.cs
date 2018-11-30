@@ -39,7 +39,7 @@ public class CursorView : MonoBehaviour {
 
     // Update is called once per frame
     void UpdateByFrame(){       
-        //プレイヤーが参照できてれば(ゴリおし)
+        //プレイヤーが参照できてれば
         if (m_player){
             if (m_player.m_currentState.GetType()==typeof(PlayerRun)){
                 Stroke();

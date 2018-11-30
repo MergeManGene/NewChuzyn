@@ -9,6 +9,7 @@ using UnityEngine;
 public abstract class ActorBase : MonoBehaviour {
 
     //以下全キャラクター共通ステータス
+    //追加する共通パラメータがある場合ここに記述
 
     //移動速度
     public float m_moveSpeed;
@@ -26,15 +27,11 @@ public abstract class ActorBase : MonoBehaviour {
     /// <summary>
     /// 初期化関数
     /// </summary>
-    public virtual void Init(){
-
-    }
+    public virtual void Init(){}
 
     /// <summary>
     /// フレーム更新用関数
     /// </summary>
-    public virtual void UpdateByFrame(){
-
-    }
+    public virtual void UpdateByFrame(){}
 
 }

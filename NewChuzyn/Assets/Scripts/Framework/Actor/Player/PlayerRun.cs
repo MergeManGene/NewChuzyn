@@ -7,6 +7,9 @@ public class PlayerRun : IPlayerState
     //苦肉の策
     private bool moving = false;
 
+    //スワイプ移動間隔の既定値
+    private const int swipeLength = 100;
+
     /// <summary>
     /// ステート開始時の処理
     /// </summary>
@@ -19,10 +22,9 @@ public class PlayerRun : IPlayerState
     /// <summary>
     /// 毎フレーム呼ばれる処理
     /// </summary>
-    /// <param name="m_player">M player.</param>
+    /// <param name="arg_player">M player.</param>
     public void OnUpdate(ActorPlayer arg_player)
     {
-
 
         if (arg_player.m_touchZone.pressing){
 
@@ -42,10 +44,8 @@ public class PlayerRun : IPlayerState
             arg_player.m_moveSpeed = 0.1f;
 
             //一定値その場で長押し状態で射出待機状態
-            if (arg_player.m_touchZone.longpressing && longPresslengs < 100 && longPresslengs > -100)
-            {
-                if (!moving)
-                {
+            if (arg_player.m_touchZone.longpressing && longPresslengs < swipeLength && longPresslengs > -swipeLength){
+                if (!moving){
                     arg_player.StateTransion(new PlayerShot());
                     Debug.Log("射出");
                 }
@@ -67,7 +67,7 @@ public class PlayerRun : IPlayerState
                 moving = false;
             }
         }
-        //指を離したら通常に戻る
+       //指を離したら通常に戻る
       //   else{
       //      arg_player.StateTransion(new PlayerIdle());
       //  }
@@ -76,8 +76,7 @@ public class PlayerRun : IPlayerState
         /// ステート終了時に呼ばれる処理
         /// </summary>
         /// <param name="arg_player">M player.</param>
-        public void OnExit(ActorPlayer arg_player)
-        {
+        public void OnExit(ActorPlayer arg_player){
 
         }
     }

@@ -174,8 +174,7 @@ public class Player : MonoBehaviour
     /// <param name="arg_col"></param>
     private void OnTriggerEnter2D(Collider2D arg_col)
     {
-        if (arg_col.tag == "Monster")
-        {
+        if (arg_col.tag == "Monster"){
             m_audioSource.clip = m_ghostSE;
             m_audioSource.Play();
 
