@@ -7,13 +7,18 @@ using UnityEngine.SceneManagement;
 public class MenuManager : MonoBehaviour {
 
 
+    private void Start()
+    {
+        
+
+    }
 
     /// <summary>
     /// Menu呼び出し
     /// </summary>
     public void OpenMenu()
     {
-
+        
     }
 
     /// <summary>
@@ -21,7 +26,7 @@ public class MenuManager : MonoBehaviour {
     /// </summary>
     public void BackToGame()
     {
-
+        
     }
 
     /// <summary>

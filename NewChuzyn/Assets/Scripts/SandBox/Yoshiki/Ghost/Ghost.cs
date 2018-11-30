@@ -27,60 +27,66 @@ public class Ghost : MonoBehaviour {
 
     private Rigidbody2D m_rigidbody2d;
 
+    private int count = 0;
+
 	private void Start () {
         m_rigidbody2d = GetComponent<Rigidbody2D>();
-
-        if (m_sideMove)
-        {
-            StartCoroutine("MoveSide");
-        }
-        else
-        {
-            StartCoroutine("MoveVertical");
-        }
-        
+       
         m_position = transform.position;
 	}
-	
 
-    private IEnumerator MoveSide()
+    private void Update()
     {
-        
-        while (true)
+        count++;
+        if (count <= 60)
         {
-
-            if (m_position.x + m_distance < transform.position.x)
-            {
-                m_rigidbody2d.velocity += (Vector2.left * m_speed);
-
-            }
-            else if (m_position.x + m_distance > transform.position.x) 
-            {
-                m_rigidbody2d.velocity -= (Vector2.left * m_speed);
-            }
-
-            yield return new WaitForSeconds(1f);
+            return;
         }
+        else 
+        {
+            if (m_sideMove)
+            {
+                MoveSide();
+            }
+            else
+            {
+                MoveVertical();
+            }
+            count = 0;
+        }
+
     }
 
-    private IEnumerator MoveVertical()
+    private void MoveSide()
     {
 
-        while (true)
+
+
+        if (m_position.x + m_distance < transform.position.x)
         {
+            m_rigidbody2d.velocity += (Vector2.left * m_speed);
 
-            if (m_position.y + m_distance < transform.position.y)
-            {
-                m_rigidbody2d.velocity += (Vector2.down * m_speed);
-
-            }
-            else if (m_position.y + m_distance > transform.position.y)
-            {
-                m_rigidbody2d.velocity += (Vector2.up * m_speed);
-            }
-
-            yield return new WaitForSeconds(1f);
         }
+        else if (m_position.x + m_distance > transform.position.x)
+        {
+            m_rigidbody2d.velocity -= (Vector2.left * m_speed);
+        }
+
+    }
+
+    private void MoveVertical()
+    {
+
+        if (m_position.y + m_distance < transform.position.y)
+        {
+            m_rigidbody2d.velocity += (Vector2.down * m_speed);
+
+        }
+        else if (m_position.y + m_distance > transform.position.y)
+        {
+            m_rigidbody2d.velocity += (Vector2.up * m_speed);
+        }
+
     }
 
     //プレイヤーと衝突時は消滅
