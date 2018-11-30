@@ -19,9 +19,14 @@ public class PlayerShot : IPlayerState {
     /// <param name="arg_player"></param>
     public void OnUpdate(ActorPlayer arg_player)
     {
+        //フリックでボールショット
         if(arg_player.m_touchZone.flicking){
             arg_player.ballObject.StateTransion(new BallShot());
         }
+
+        //入力が無ければ通常へ戻る
+        if (!arg_player.m_touchZone.pressing)
+            arg_player.StateTransion(new PlayerIdle());
     }
 
     /// <summary>

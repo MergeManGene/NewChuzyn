@@ -28,6 +28,10 @@ public class ActorPlayer : ActorBase
     [HideInInspector]
     public IBall ballObject;
 
+    /// <summary>プレイヤーと衝突したオブジェクト</summary>
+    [HideInInspector]
+    public GameObject colPlayerOBject;
+
     public override void Init(){
         m_touchZone = GameObject.Find("TouchZone").GetComponent<TouchZone>();
         ballObject = GameObject.Find("Ball").GetComponent<IBall>();
@@ -55,7 +59,11 @@ public class ActorPlayer : ActorBase
             //プレイヤーを幽霊状態に移行
             m_playerForm = PlayerForm.Ghost;
         }
-    }
 
+        if (arg_col.tag == "Paipu"){
+            Debug.Log("パイプ");
+            colPlayerOBject = arg_col.gameObject;
+        }
+    }
 
 }

@@ -9,6 +9,7 @@ TagManager:
   - Rebound
   - PassWall
   - Monster
+  - Paipu
   layers:
   - Default
   - TransparentFX

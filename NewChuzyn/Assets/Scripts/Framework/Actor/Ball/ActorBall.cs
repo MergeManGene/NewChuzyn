@@ -35,6 +35,7 @@ public class ActorBall : BallBase {
     }
 
     //衝突したオブジェクト格納　衝突時のステート変更もまとめてここで
+    //ボールに反応するタグを追加する場合はここに記述
     private void OnTriggerEnter2D(Collider2D arg_col)
     {
         hitPosition = transform.position;
@@ -43,6 +44,7 @@ public class ActorBall : BallBase {
             case "Wall":
             case "Monster":
             case "PassWall":
+            case "Paipu":
                 colGameObject = arg_col.gameObject;
                 this.StateTransion(new BallBack());
                 break;

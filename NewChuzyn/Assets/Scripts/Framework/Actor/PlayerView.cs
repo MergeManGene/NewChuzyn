@@ -38,19 +38,20 @@ public class PlayerView : MonoBehaviour {
     /// ステートに応じたアニメーション描画
     /// </summary>
     /// <param name="arg_playerState">Argument player state.</param>
-    private void ViewStateAnimation(IPlayerState arg_playerState)
-    {
+    private void ViewStateAnimation(IPlayerState arg_playerState){
 
-        switch (m_player.m_playerForm)
-        {
+        switch (m_player.m_playerForm){
+
             //通常形態アニメーション
             case IPlayer.PlayerForm.Normal:
-
-        if (arg_playerState.GetType() == typeof(PlayerIdle)){
+                if (arg_playerState.GetType() == typeof(PlayerFall)){
+                    m_animator.Play("PlayerFall");
+                }
+                else  if (arg_playerState.GetType() == typeof(PlayerIdle)){
             m_animator.Play("Player");
         }else if (arg_playerState.GetType() == typeof(PlayerRun)){
-            m_animator.Play("PlayerMove");
-        }break;
+                    m_animator.Play("PlayerMove");
+                }break;
 
             //幽霊状態アニメーション
             case IPlayer.PlayerForm.Ghost:

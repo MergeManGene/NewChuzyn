@@ -18,8 +18,9 @@ public class IPlayer : ActorPlayer {
     public override void UpdateByFrame(){
         m_currentState.OnUpdate(this);
 
+        //追記：Stateクラスで全ての状態遷移を管理するため削除
         //入力がなければ通常状態に以降
-        if (!m_touchZone.pressing) m_currentState = new PlayerIdle();
+       // if (!m_touchZone.pressing) m_currentState = new PlayerIdle();
 
         //描画処理
         View();

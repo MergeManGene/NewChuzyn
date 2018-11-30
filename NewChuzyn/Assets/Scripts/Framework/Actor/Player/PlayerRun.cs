@@ -62,15 +62,11 @@ public class PlayerRun : IPlayerState
                 arg_player.m_direction = ActorBase.Direction.Left;
                 moving = true;
             }
-
-            if (!arg_player.m_touchZone.pressing){
-                moving = false;
-            }
         }
        //指を離したら通常に戻る
-      //   else{
-      //      arg_player.StateTransion(new PlayerIdle());
-      //  }
+         else{
+            arg_player.StateTransion(new PlayerIdle());
+        }
     }
         /// <summary>
         /// ステート終了時に呼ばれる処理

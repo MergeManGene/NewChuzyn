@@ -20,7 +20,7 @@ public class Paipu : MonoBehaviour {
             m_colGameObject = arg_col.gameObject;
 
             m_playerAnimator = m_colGameObject.GetComponent<Animator>();
-            m_playerAnimator.Play("PlayerBack");
+            m_playerAnimator.Play("PlayerFall");
             m_colGameObject.transform.position = new Vector2(transform.position.x, m_colGameObject.transform.position.y);
 
             if (!m_audioSource.isPlaying)

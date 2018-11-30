@@ -147,7 +147,7 @@ public class Player : MonoBehaviour
             if (m_playerState == PlayerState.Deffault)
             {
                 //プレイヤーが下降中でなければ通常アニメーション
-                if (m_animClip.clip.name != "PlayerBack")
+                if (m_animClip.clip.name != "PlayerFall")
                 {
                     m_animator.Play("Player");
                 }
