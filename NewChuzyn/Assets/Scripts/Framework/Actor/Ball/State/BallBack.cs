@@ -21,11 +21,11 @@ public class BallBack : IBallState {
                 //壁に当たったらその座標に移動する
                 case "Wall":
                 case "Paipu":
+                case"PassWall":
                     arg_ball.playerObject.transform.position = Vector3.MoveTowards(arg_ball.playerObject.transform.position, arg_ball.hitPosition, 0.5f);
                     break;
                 //モンスターに当たったらくっつけて戻ってくる
                 case "Monster":
-                case "PassWall":
                     arg_ball.colGameObject.transform.position = arg_ball.transform.position;
                     arg_ball.transform.position = Vector3.MoveTowards(arg_ball.transform.position, arg_ball.playerObject.transform.position, 0.5f);
                     break;

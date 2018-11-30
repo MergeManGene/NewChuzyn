@@ -59,8 +59,7 @@ public class PlayerView : MonoBehaviour {
                     m_animator.Play("PlayerGhost");
                 }else if (arg_playerState.GetType() == typeof(PlayerRun)){
                     m_animator.Play("PlayerGhostMove");
-                }break;
-            
+                }break;          
             default:
                 break;
         }

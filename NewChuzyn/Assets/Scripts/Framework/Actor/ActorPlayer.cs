@@ -1,6 +1,9 @@
 ﻿//スクリプト名：ActorPlayer
 //概要：プレイヤー共通のステータスクラス
 //別ステートのプレイヤーを実装する際には継承する
+//形態のステートはこちらで管理
+//動作の状態遷移は各ステート内に記述
+
 
 using System.Collections;
 using System.Collections.Generic;
@@ -32,6 +35,9 @@ public class ActorPlayer : ActorBase
     [HideInInspector]
     public GameObject colPlayerOBject;
 
+    //コライダー分離検出フラグ
+    public bool ExitCollider;
+
     public override void Init(){
         m_touchZone = GameObject.Find("TouchZone").GetComponent<TouchZone>();
         ballObject = GameObject.Find("Ball").GetComponent<IBall>();
@@ -59,11 +65,19 @@ public class ActorPlayer : ActorBase
             //プレイヤーを幽霊状態に移行
             m_playerForm = PlayerForm.Ghost;
         }
-
         if (arg_col.tag == "Paipu"){
-            Debug.Log("パイプ");
             colPlayerOBject = arg_col.gameObject;
         }
     }
+    /// <summary>
+    /// コライダーと離れた際
+    /// </summary>
+    /// <param name="arg_col">Argument col.</param>
+    private void OnTriggerExit2D(Collider2D arg_col){
+        //パイプと離れた
+        if (arg_col.tag == "Paipu") ExitCollider = true;
 
+        //壁をする抜けたら元の形態に戻る
+        if (arg_col.tag == "PassWall") m_playerForm = PlayerForm.Normal;
+    }
 }
