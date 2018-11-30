@@ -45,6 +45,5 @@ public class IPlayer : ActorPlayer {
     /// </summary>
     private void Update(){
         UpdateByFrame();
-        Debug.Log(m_currentState);
     }
 } 
