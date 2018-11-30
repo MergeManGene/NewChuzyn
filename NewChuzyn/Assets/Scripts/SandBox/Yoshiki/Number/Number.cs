@@ -17,12 +17,15 @@ public class Number : MonoBehaviour {
 
     public bool hited = false;
 
+    private AudioSource m_audioSource;
+
     private void Start()
     {
         m_numOrder = transform.parent.transform.gameObject;
         m_order = m_numOrder.GetComponent<NumberOrder>();
         m_animetor = GetComponent<Animator>();
         m_collider = GetComponent<PolygonCollider2D>();
+        m_audioSource = GetComponent<AudioSource>();
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -33,6 +36,7 @@ public class Number : MonoBehaviour {
             if (m_hitNumber == m_order.count)
             {
                 m_order.Match();
+                m_audioSource.Play();
                 m_animetor.SetBool("light", true);
                 hited = true;
                 m_collider.enabled = false;

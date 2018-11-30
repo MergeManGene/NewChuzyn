@@ -9,7 +9,11 @@ TagManager:
   - Rebound
   - PassWall
   - Monster
+<<<<<<< HEAD
   - Paipu
+=======
+  - SearchLight
+>>>>>>> bf4dbabe5c2fe2ca875cd1cd6db30a492f33ed56
   layers:
   - Default
   - TransparentFX
