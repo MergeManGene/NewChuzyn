@@ -9,7 +9,7 @@ public class PlayerIdle : IPlayerState {
     /// </summary>
     /// <param name="arg_player">Argument player.</param>
     public void OnEnter(ActorPlayer arg_player){
-
+        SoundPlayer.Instance.PlaySE("SelectSE");
     }
 
     /// <summary>
@@ -17,6 +17,8 @@ public class PlayerIdle : IPlayerState {
     /// </summary>
     /// <param name="arg_player">Argument player.</param>
     public void OnUpdate(ActorPlayer arg_player){
+
+
 
         //落下状態は例外として最優先する
         if(arg_player.colPlayerOBject){
