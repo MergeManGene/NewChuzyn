@@ -9,7 +9,7 @@ public class PlayerIdle : IPlayerState {
     /// </summary>
     /// <param name="arg_player">Argument player.</param>
     public void OnEnter(ActorPlayer arg_player){
-        SoundPlayer.Instance.PlaySE("SelectSE");
+    
     }
 
     /// <summary>

@@ -178,8 +178,6 @@ public class Player : MonoBehaviour
             //m_audioSource.clip = m_ghostSE;
             //m_audioSource.Play();
 
-            SoundPlayer.Instance.PlaySE("SelectSE");
-
             //プレイヤーを幽霊状態に移行
             GameManager.PlayerFormInstanse = GameManager.PlayerFormState.Ghost;
         }

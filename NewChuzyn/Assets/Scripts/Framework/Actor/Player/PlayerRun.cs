@@ -62,6 +62,7 @@ public class PlayerRun : IPlayerState
                 arg_player.m_direction = ActorBase.Direction.Left;
                 moving = true;
             }
+
         }
        //指を離したら通常に戻る
          else{

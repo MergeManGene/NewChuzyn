@@ -63,8 +63,14 @@ public class SoundPlayer
     public SoundPlayer()
     {
         // 実装例
-		audioClips.Add("SelectSE", new AudioClipInfo("Audio/SE/SE_Ghost", "ほげSE"));
+        //SoundPlayer.Instance.PlaySE("PlayerWalk",2);
 
+        //幽霊になった時のSE
+        audioClips.Add("GhostSE", new AudioClipInfo("Audio/SE/SE_Ghost", "GhostSE"));
+        //幽霊から元に戻った時のSE
+        audioClips.Add("HowaHowa", new AudioClipInfo("Audio/SE/SE_HowaHowa", "HowaHowa"));
+        //プレイヤーが歩くSE
+        audioClips.Add("PlayerWalk", new AudioClipInfo("Audio/SE/SE_Walk", "PlayerWalkSE"));
     }
  
     /// <summary>
