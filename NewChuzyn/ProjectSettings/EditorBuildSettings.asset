@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Main/Title.unity
     guid: 17de79bf604cfd148b54678238d9409f
   - enabled: 1
+    path: Assets/Scenes/SandBox/Inagaki/Select.unity
+    guid: 622069428c642884388d68884d2111cb
+  - enabled: 1
     path: Assets/Scenes/Main/Prologue.unity
     guid: 7b64be3b8d1ce714ebf841ca3cb1b042
   - enabled: 1
