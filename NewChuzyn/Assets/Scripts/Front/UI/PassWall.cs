@@ -8,20 +8,23 @@ public class PassWall : MonoBehaviour {
     private Collider2D m_collider2D;
 
     private AudioSource m_audioSource;
+
+    private IPlayer m_player;
     /// <summary>
     /// タイルマップコライダーのコンポーネント取得
     /// </summary>
     private void Start(){
         m_collider2D = GetComponent<Collider2D>();
         m_audioSource = GetComponent<AudioSource>();
+        m_player = GameObject.Find("Player").GetComponent<IPlayer>();
     }
 
     private void OnCollisionEnter2D(Collision2D arg_col){
         //幽霊状態のプレイヤーが触れたら通れるようになる
         if (arg_col.collider.tag == "Player"){
-            if (GameManager.PlayerFormInstanse == GameManager.PlayerFormState.Ghost){
+            if (m_player.m_playerForm == IPlayer.PlayerForm.Ghost){
                 m_collider2D.isTrigger = true;
-            }
+            }           
         }
     }
 
@@ -32,8 +35,7 @@ public class PassWall : MonoBehaviour {
     private void OnTriggerExit2D(Collider2D arg_col){
         if (m_collider2D.isTrigger){
             m_collider2D.isTrigger = false;
-            GameManager.PlayerFormInstanse = GameManager.PlayerFormState.Normal;
-
+            m_player.m_playerForm = IPlayer.PlayerForm.Normal;
             //音邪
             if (!m_audioSource.isPlaying){
                 m_audioSource.Play();

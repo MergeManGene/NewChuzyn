@@ -51,8 +51,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4754004228541862}
   - component: {fileID: 212351056554466898}
-  - component: {fileID: 114741127895330910}
   - component: {fileID: 120632238708626962}
+  - component: {fileID: 114548266395062722}
   m_Layer: 0
   m_Name: MaruRed
   m_TagString: Untagged
@@ -101,7 +101,7 @@ Transform:
   m_Father: {fileID: 4080198844800958}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114741127895330910
+--- !u!114 &114548266395062722
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -109,11 +109,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1071905344118950}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb2a8defc24da594792a9d35cd8a92b4, type: 3}
+  m_Script: {fileID: 11500000, guid: 06d2728e922ea4c06b5ad8e4fda6d064, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_player: {fileID: 0}
-  m_startMark: {fileID: 1006744756489494}
+  m_startMark: {fileID: 1066498386036890, guid: c6e139f437cd37e4eaa158d3d03d60af,
+    type: 2}
 --- !u!120 &120632238708626962
 LineRenderer:
   m_ObjectHideFlags: 1
