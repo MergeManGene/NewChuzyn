@@ -15,11 +15,11 @@ public class Stage_Select : MonoBehaviour {
     }
 
     public void stg_1(){
-        FadeManager.Instance.LoadScene("Stage1", 1f);
+        FadeManager.Instance.LoadScene("Prologue", 1f);
     }
     public void stg_2()
     {
-        FadeManager.Instance.LoadScene("Stage2", 1f);
+        FadeManager.Instance.LoadScene("Story1", 1f);
     }
 
 }

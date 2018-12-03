@@ -44,7 +44,7 @@ public class StorySkip : MonoBehaviour
 
         if (m_sceneType == SceneType.Title)
         {
-            FadeManager.Instance.LoadScene("Prologue", 1f);
+            FadeManager.Instance.LoadScene("STAGE_SELECT", 1f);
         }
 
         if (m_sceneType == SceneType.Story1)
