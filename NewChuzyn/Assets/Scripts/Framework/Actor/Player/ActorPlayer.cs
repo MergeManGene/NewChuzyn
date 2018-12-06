@@ -65,6 +65,7 @@ public class ActorPlayer : ActorBase
         if (arg_col.tag == "Monster"){
             //プレイヤーを幽霊状態に移行
             m_playerForm = PlayerForm.Ghost;
+            SoundPlayer.Instance.PlaySE("GhostSE");
         }
         if (arg_col.tag == "Paipu"){
             colPlayerOBject = arg_col.gameObject;

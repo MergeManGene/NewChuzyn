@@ -29,6 +29,9 @@ public class PlayerRun : IPlayerState
 
         if (arg_player.m_touchZone.pressing){
 
+            
+            SoundPlayer.Instance.PlaySE("PlayerWalk");
+
             float m_length;
             float m_triggerLength = 2f;
 
@@ -74,6 +77,7 @@ public class PlayerRun : IPlayerState
         }
        //指を離したら通常に戻る
          else{
+            SoundPlayer.Instance.MuteSE();
             arg_player.StateTransion(new PlayerIdle());
         }
     }

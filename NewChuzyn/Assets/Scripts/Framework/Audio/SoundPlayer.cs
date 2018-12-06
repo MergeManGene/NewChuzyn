@@ -5,13 +5,19 @@
 *********************************************************************************************
 * @author     Ryo Sugiyama
 *********************************************************************************************
+* @HowToUse   SoundPlayer.Instance.PlaySE(string SENAME);
+*********************************************************************************************
 * Copyright © 2017 Ryo Sugiyama All Rights Reserved.
 *********************************************************************************************/
 
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/// <summary>
+/// @HowToUse
+/// @SE  SoundPlayer.Instance.PlaySE(SENAME);
+/// @BGM SoundPlayer.Instance.PlayBGM(BGMNAME, FADETIME, ISLOOP, VOLUME);
+/// </summary>
 public class SoundPlayer
 {
 	
@@ -71,15 +77,19 @@ public class SoundPlayer
         audioClips.Add("HowaHowa", new AudioClipInfo("Audio/SE/SE_HowaHowa", "HowaHowa"));
         //プレイヤーが歩くSE
         audioClips.Add("PlayerWalk", new AudioClipInfo("Audio/SE/SE_Walk", "PlayerWalkSE"));
+        //射出SE
+        audioClips.Add("Shot", new AudioClipInfo("Audio/SE/SE_Shot","ShotSE"));
+    
     }
  
     /// <summary>
 	/// 追加したサウンドデータを再生する
+    /// 複数再生に向いています
     /// </summary>
 	/// <returns><c>true</c>, 再生の成功 <c>false</c> 再生の失敗 </returns>
     /// <param name="seName"> SEの名前 </param>
 	/// <param name="volume"> ボリュームの設定 (0f ~ 1.0f) </param>
-	public bool PlaySE(string seName, float volume = 1.0f)
+	public bool PlayOneShotSE(string seName, float volume = 1.0f)
     {
 
         if (audioClips.ContainsKey(seName) == false)
@@ -108,6 +118,56 @@ public class SoundPlayer
         audioSource.PlayOneShot(info.clip);
 
         return true;
+    }
+
+    /// <summary>
+    /// 一つのみの再生に向いています
+    /// </summary>
+    /// <returns><c>true</c>, if se was played, <c>false</c> otherwise.</returns>
+    /// <param name="seName">Se name.</param>
+    /// <param name="volume">Volume.</param>
+    public bool PlaySE(string seName, float volume = 1.0f)
+    {
+        if (audioClips.ContainsKey(seName) == false)
+        {
+            Debug.LogError("<color=red>" + seName + "がコンテナの中にありません。パスが間違っているか、呼び出し名が間違っているか確認してください。</color>");
+            return false;
+        }
+
+        AudioClipInfo info = audioClips[seName];
+
+        //なければロード
+        if (info.clip == null)
+            info.clip = (AudioClip)Resources.Load(info.resourceName);
+
+        if (soundPlayerObj == null)
+        {
+            soundPlayerObj = new GameObject(audioClips[seName].name);
+            audioSource = soundPlayerObj.AddComponent<AudioSource>();
+        }
+
+        //ボリュームの設定
+        audioSource.volume = volume;
+        audioSource.loop = false;
+        audioSource.clip = info.clip;
+
+        audioSource.mute = false;
+        //再生
+        if(!audioSource.isPlaying)
+            audioSource.Play();
+
+        return true;
+    }
+
+    /// <summary>
+    /// 現在再生中のSEをミュートする
+    /// </summary>
+    public void MuteSE()
+    {
+        if (audioSource == null)
+            return;
+
+        audioSource.mute = true;
     }
 
     /// <summary>

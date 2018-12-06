@@ -27,6 +27,8 @@ public class BallShot : IBallState {
 
         //向いている方向に向かって移動
         arg_ball.transform.position += angleVec * Time.deltaTime;
+
+        SoundPlayer.Instance.PlaySE("Shot");
     }
 
     public void OnExit(ActorBall arg_ball){

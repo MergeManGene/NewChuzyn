@@ -12,8 +12,6 @@ public class StorySkip : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-
         // エディタの場合の処理     
         //ボタン押したときシーンに合わせて次のシーンへ移動
         if (Application.isEditor)

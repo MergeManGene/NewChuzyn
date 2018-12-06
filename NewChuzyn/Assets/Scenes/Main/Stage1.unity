@@ -689,7 +689,17 @@ Prefab:
       propertyPath: m_RootOrder
       value: 10
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 61651677143528936, guid: 3ebf1e4d842ae3d458ca2c3a2bceeb8d,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1936498856928510, guid: 3ebf1e4d842ae3d458ca2c3a2bceeb8d, type: 2}
+      propertyPath: m_TagString
+      value: Paipu
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114850930700592416, guid: 3ebf1e4d842ae3d458ca2c3a2bceeb8d, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 3ebf1e4d842ae3d458ca2c3a2bceeb8d, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &165463090 stripped
@@ -8214,11 +8224,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4173695967827726, guid: 2cf90300edbd5c4479ea04037f37fe28, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 5.28
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4173695967827726, guid: 2cf90300edbd5c4479ea04037f37fe28, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -2.63
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4173695967827726, guid: 2cf90300edbd5c4479ea04037f37fe28, type: 2}
       propertyPath: m_LocalPosition.z
