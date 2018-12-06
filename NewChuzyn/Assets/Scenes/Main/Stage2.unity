@@ -157,6 +157,11 @@ Prefab:
       propertyPath: m_TileAssetArray.Array.data[0].m_Data
       value: 
       objectReference: {fileID: 715983347}
+    - target: {fileID: 114274312940001660, guid: 1c9eb867132386c4fbbd4cd5f0378653,
+        type: 2}
+      propertyPath: m_roomId
+      value: 26
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1c9eb867132386c4fbbd4cd5f0378653, type: 2}
   m_IsPrefabAsset: 0
