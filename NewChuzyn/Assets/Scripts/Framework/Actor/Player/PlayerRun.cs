@@ -49,10 +49,10 @@ public class PlayerRun : IPlayerState
 
             //スワイプの長さに応じて移動速度アップ
             if (m_length > 5 || m_length < -5){
-                arg_player.m_moveSpeed = 0.1f;
+                arg_player.m_moveSpeed = 0.07f;
                 if (m_length > 12 || m_length < -12)
-                    arg_player.m_moveSpeed = 0.2f;
-            } 
+                    arg_player.m_moveSpeed = 0.1f;
+            }
 
             //一定値その場で長押し状態で射出待機状態
             if (arg_player.m_touchZone.longpressing && longPresslengs < swipeLength && longPresslengs > -swipeLength){
