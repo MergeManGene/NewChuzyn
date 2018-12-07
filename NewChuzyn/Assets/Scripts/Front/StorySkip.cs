@@ -12,23 +12,28 @@ public class StorySkip : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // エディタの場合の処理     
-        //ボタン押したときシーンに合わせて次のシーンへ移動
-        if (Application.isEditor)
+        //フェードしてない時は入力可能
+        if (!FadeManager.Instance.isFading)
         {
-            if (Input.GetMouseButtonDown(0))
+
+            // エディタの場合の処理     
+            //ボタン押したときシーンに合わせて次のシーンへ移動
+            if (Application.isEditor)
             {
-                InputSceneAction();
-            }
-        }
-        else
-        {
-            // エディタ以外の場合
-            if (Input.touchCount > 0)
-            {
-                if (Input.GetTouch(0).phase == TouchPhase.Began)
+                if (Input.GetMouseButtonDown(0))
                 {
                     InputSceneAction();
+                }
+            }
+            else
+            {
+                // エディタ以外の場合
+                if (Input.touchCount > 0)
+                {
+                    if (Input.GetTouch(0).phase == TouchPhase.Began)
+                    {
+                        InputSceneAction();
+                    }
                 }
             }
         }
