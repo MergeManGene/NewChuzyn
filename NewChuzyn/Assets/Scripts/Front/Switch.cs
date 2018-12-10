@@ -11,6 +11,9 @@ public class Switch : MonoBehaviour {
 
     private AudioSource m_audioSource;
 
+    [SerializeField]
+    private Sprite m_pushed;
+
     private void Start(){
         m_spriteRenderer = GetComponent<SpriteRenderer>();
         m_audioSource = GetComponent<AudioSource>();
@@ -24,7 +27,7 @@ public class Switch : MonoBehaviour {
         }
 
         pushing = true;
-        m_spriteRenderer.color = Color.red;
+        m_spriteRenderer.sprite = m_pushed;
     }
     private void OnTriggerEnter2D(Collider2D arg_col){
         PushSwich();
