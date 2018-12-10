@@ -19,13 +19,26 @@ public class DrawCursorLine : MonoBehaviour {
 
     /// <summary>格納用タッチ開始座標</summary>
     private Vector2 m_currentTouchMovePos;
+
+    /// <summary>カメラ座標</summary>
+    private Vector3 m_cameraStartPos;
+
     /// <summary>描画フラグ</summary>
     private bool drawing;
-	
-	// Update is called once per frame
-	void Update () {
+
+    private void Start(){
+        m_cameraStartPos = Camera.main.transform.position;
+    }
+
+    // Update is called once per frame
+    void Update () {
         m_curentTouchStartPos = Camera.main.ScreenToWorldPoint(m_touchZone.pressStartPosition);
-        DrawCursor();  
+        DrawCursor();
+
+        //カメラ座標更新時にマーカー再描画
+        if(m_cameraStartPos!=Camera.main.transform.position){
+            DrawUpdate();
+        }
     }
 
     
@@ -46,7 +59,18 @@ public class DrawCursorLine : MonoBehaviour {
             Destroy(cursorObject);
             drawing = false;
         }
+    }
 
-
+    /// <summary>
+    /// カメラ座標が動いた時呼び出し
+    /// カメラ初期座標を更新してマーカーを再描画
+    /// </summary>
+    private void DrawUpdate()
+    {
+        if (cursorObject)
+        {
+            cursorObject.transform.position = m_curentTouchStartPos;
+            m_cameraStartPos = Camera.main.transform.position;
+        }
     }
 }

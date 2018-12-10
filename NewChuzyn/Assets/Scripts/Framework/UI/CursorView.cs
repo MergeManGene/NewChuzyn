@@ -19,7 +19,7 @@ public class CursorView : MonoBehaviour {
     private SpriteRenderer m_SpriteRenderer;
 
     // Use this for initialization
-    void Start(){
+    private void Start(){
         m_SpriteRenderer = GetComponent<SpriteRenderer>();
         m_lineRenderer = GetComponent<LineRenderer>();
 
@@ -38,7 +38,7 @@ public class CursorView : MonoBehaviour {
     }
 
     // Update is called once per frame
-    void UpdateByFrame(){       
+    private void UpdateByFrame(){       
         //プレイヤーが参照できてれば
         if (m_player){
             if (m_player.m_currentState.GetType()==typeof(PlayerRun)){
