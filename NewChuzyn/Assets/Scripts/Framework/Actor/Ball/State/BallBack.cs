@@ -16,12 +16,12 @@ public class BallBack : IBallState {
             {
                 //地形に当たったら戻ってくる
                 case "Ground":
+                case "PassWall":
                     arg_ball.transform.position = Vector3.MoveTowards(arg_ball.transform.position, arg_ball.playerObject.transform.position, 0.5f);
                     break;
                 //壁に当たったらその座標に移動する
                 case "Wall":
                 case "Paipu":
-                case"PassWall":
                     arg_ball.playerObject.transform.position = Vector3.MoveTowards(arg_ball.playerObject.transform.position, arg_ball.hitPosition, 0.5f);
                     break;
                 //モンスターに当たったらくっつけて戻ってくる
