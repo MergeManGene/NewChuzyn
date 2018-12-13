@@ -162,6 +162,34 @@ Prefab:
       propertyPath: m_roomId
       value: 26
       objectReference: {fileID: 0}
+    - target: {fileID: 114260539400626188, guid: 1c9eb867132386c4fbbd4cd5f0378653,
+        type: 2}
+      propertyPath: m_sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 53b4c5d13947628498e620bef1792210,
+        type: 3}
+    - target: {fileID: 114432754898588816, guid: 1c9eb867132386c4fbbd4cd5f0378653,
+        type: 2}
+      propertyPath: m_sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 53b4c5d13947628498e620bef1792210,
+        type: 3}
+    - target: {fileID: 114626480608457204, guid: 1c9eb867132386c4fbbd4cd5f0378653,
+        type: 2}
+      propertyPath: m_sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 53b4c5d13947628498e620bef1792210,
+        type: 3}
+    - target: {fileID: 114711537921776350, guid: 1c9eb867132386c4fbbd4cd5f0378653,
+        type: 2}
+      propertyPath: m_sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 53b4c5d13947628498e620bef1792210,
+        type: 3}
+    - target: {fileID: 4251416040317018, guid: 1c9eb867132386c4fbbd4cd5f0378653, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -3.43
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1c9eb867132386c4fbbd4cd5f0378653, type: 2}
   m_IsPrefabAsset: 0
