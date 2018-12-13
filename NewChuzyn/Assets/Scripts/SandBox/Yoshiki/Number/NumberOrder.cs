@@ -47,7 +47,7 @@ public class NumberOrder : MonoBehaviour {
         {
             m_audioSource.clip = m_numClear;
             m_audioSource.Play();
-            m_searchLight.SetActive(true);
+            StartCoroutine(Light());
 
         }
     }
@@ -69,6 +69,13 @@ public class NumberOrder : MonoBehaviour {
             }
 
         }
+    }
+
+    private IEnumerator Light()
+    {
+        yield return new WaitForSeconds(0.5f);
+        m_searchLight.SetActive(true);
+
     }
 
 }

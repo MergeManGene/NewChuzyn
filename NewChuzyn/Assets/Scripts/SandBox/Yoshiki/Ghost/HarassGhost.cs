@@ -8,6 +8,8 @@ public class HarassGhost : MonoBehaviour {
 
     private AudioSource m_audioSource;
 
+    [SerializeField]
+    private Sprite m_sprite;
 
     /// <summary>
     /// 消滅処理
@@ -16,6 +18,7 @@ public class HarassGhost : MonoBehaviour {
     {
         m_audioSource = GetComponent<AudioSource>();
         m_renderer = GetComponent<SpriteRenderer>();
+        m_renderer.sprite = m_sprite;
         Color color = m_renderer.color;
         
         m_audioSource.Play();
