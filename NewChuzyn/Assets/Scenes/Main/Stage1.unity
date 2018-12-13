@@ -125,7 +125,7 @@ GameObject:
   - component: {fileID: 10381553}
   m_Layer: 0
   m_Name: gomi (4)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -299,7 +299,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 1729fd791ad98fd4da6347a1c5264dc1, type: 3}
   m_Color: {r: 0.70980394, g: 0.7803922, b: 0.77647066, a: 1}
   m_FlipX: 0
@@ -323,7 +323,7 @@ GameObject:
   - component: {fileID: 23988736}
   m_Layer: 0
   m_Name: gomi (6)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -401,7 +401,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 1729fd791ad98fd4da6347a1c5264dc1, type: 3}
   m_Color: {r: 0.70980394, g: 0.7803922, b: 0.77647066, a: 1}
   m_FlipX: 0
@@ -992,7 +992,7 @@ GameObject:
   - component: {fileID: 168161056}
   m_Layer: 0
   m_Name: gomi (4)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1070,7 +1070,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 1729fd791ad98fd4da6347a1c5264dc1, type: 3}
   m_Color: {r: 0.70980394, g: 0.7803922, b: 0.77647066, a: 1}
   m_FlipX: 0
@@ -1448,7 +1448,7 @@ GameObject:
   - component: {fileID: 403285291}
   m_Layer: 0
   m_Name: gomi (7)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1526,7 +1526,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 1729fd791ad98fd4da6347a1c5264dc1, type: 3}
   m_Color: {r: 0.70980394, g: 0.7803922, b: 0.77647066, a: 1}
   m_FlipX: 0
@@ -2638,7 +2638,7 @@ GameObject:
   - component: {fileID: 588646019}
   m_Layer: 0
   m_Name: gomi (4)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2716,7 +2716,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 1729fd791ad98fd4da6347a1c5264dc1, type: 3}
   m_Color: {r: 0.70980394, g: 0.7803922, b: 0.77647066, a: 1}
   m_FlipX: 0
@@ -3281,7 +3281,7 @@ GameObject:
   - component: {fileID: 828191412}
   m_Layer: 0
   m_Name: Stone5
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7407,7 +7407,7 @@ GameObject:
   - component: {fileID: 1221253603}
   m_Layer: 0
   m_Name: Stone2
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7436,7 +7436,7 @@ GameObject:
   - component: {fileID: 1281689036}
   m_Layer: 0
   m_Name: Stone3
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7567,7 +7567,7 @@ GameObject:
   - component: {fileID: 1328470535}
   m_Layer: 0
   m_Name: gomi (1)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7741,7 +7741,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 1729fd791ad98fd4da6347a1c5264dc1, type: 3}
   m_Color: {r: 0.70980394, g: 0.7803922, b: 0.77647066, a: 1}
   m_FlipX: 0
@@ -7941,7 +7941,7 @@ GameObject:
   - component: {fileID: 1388763878}
   m_Layer: 0
   m_Name: gomi (3)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8115,7 +8115,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 1729fd791ad98fd4da6347a1c5264dc1, type: 3}
   m_Color: {r: 0.70980394, g: 0.7803922, b: 0.77647066, a: 1}
   m_FlipX: 0
@@ -8256,7 +8256,7 @@ GameObject:
   - component: {fileID: 1473167436}
   m_Layer: 0
   m_Name: Stone4
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8500,7 +8500,7 @@ GameObject:
   - component: {fileID: 1729060696}
   m_Layer: 0
   m_Name: gomi (5)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8578,7 +8578,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 1729fd791ad98fd4da6347a1c5264dc1, type: 3}
   m_Color: {r: 0.70980394, g: 0.7803922, b: 0.77647066, a: 1}
   m_FlipX: 0
@@ -8981,7 +8981,7 @@ GameObject:
   - component: {fileID: 1913960543}
   m_Layer: 0
   m_Name: gomi
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9020,7 +9020,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 1729fd791ad98fd4da6347a1c5264dc1, type: 3}
   m_Color: {r: 0.70980394, g: 0.7803922, b: 0.77647066, a: 1}
   m_FlipX: 0
@@ -9358,7 +9358,7 @@ GameObject:
   - component: {fileID: 1986250123}
   m_Layer: 0
   m_Name: gomi (5)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9436,7 +9436,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 1729fd791ad98fd4da6347a1c5264dc1, type: 3}
   m_Color: {r: 0.70980394, g: 0.7803922, b: 0.77647066, a: 1}
   m_FlipX: 0
@@ -9458,7 +9458,7 @@ GameObject:
   - component: {fileID: 2019324267}
   m_Layer: 0
   m_Name: Stone1
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
