@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+<<<<<<< HEAD
 public class StoryUFO : MonoBehaviour
 {
     Rigidbody2D kon;
@@ -23,4 +24,12 @@ public class StoryUFO : MonoBehaviour
         //hoge
        // kon.angularVelocity = Vector3.up * Mathf.PI;
     }
+=======
+public class StoryUFO : MonoBehaviour {
+	
+	// Update is called once per frame
+	void Update () {
+        transform.position += new Vector3(0.005f, 0, 0);
+	}
+>>>>>>> e132ebc84c85172635068f094672db2d1832f7cf
 }
