@@ -20,6 +20,7 @@ public class Story_rock : MonoBehaviour {
     }
     void onCollisionEnter2D(Collision collision)
     {
+        //hoge
         // kon.angularVelocity = Vector3.up * Mathf.PI;
     }
 }

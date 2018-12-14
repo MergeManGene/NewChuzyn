@@ -916,7 +916,7 @@ GameObject:
   - component: {fileID: 588385240}
   - component: {fileID: 588385239}
   m_Layer: 0
-  m_Name: space_back
+  m_Name: spaceback
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

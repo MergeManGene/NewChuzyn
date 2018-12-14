@@ -20,6 +20,7 @@ public class StoryUFO : MonoBehaviour
     }
     void onCollisionEnter2D(Collision collision)
     {
+        //hoge
        // kon.angularVelocity = Vector3.up * Mathf.PI;
     }
 }
