@@ -89,7 +89,6 @@ public class TimeManager : MonoBehaviour {
     /// </summary>
     public void Pause()
     {
-        Debug.Log("2");
         m_currentState = State.Pause;
         m_pauseObjects = GameObject.FindObjectsOfType<Pausable>().ToList();
         foreach (Pausable pauseObject in m_pauseObjects)

@@ -23,6 +23,10 @@ public class GearGet : MonoBehaviour {
     /// </summary>
     private void ClearMove(){
         if (GearGetting){
+
+            TimeManager menu = GameObject.Find("MenuManager").GetComponent<TimeManager>();
+            menu.Pause();
+
             transform.Rotate(0, 0, 0.5f);
             
             if (transform.position.y <= -12){
