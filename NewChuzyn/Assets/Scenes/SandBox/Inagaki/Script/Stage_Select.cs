@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Stage_Select : MonoBehaviour {
-    public GameObject selectObject;
-
 
     
     /// <summary>
