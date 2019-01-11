@@ -7,8 +7,8 @@ public class StorySkip : MonoBehaviour
 {
 
     public enum SceneType { Title, Prologe,Story1,Ending }
-    public SceneType m_sceneType;
-
+    public SceneType m_sceneType; 
+    
     // Update is called once per frame
     void Update()
     {
@@ -22,6 +22,8 @@ public class StorySkip : MonoBehaviour
             {
                 if (Input.GetMouseButtonDown(0))
                 {
+                    AudioSource m_audioSource = GetComponent<AudioSource>();
+                    m_audioSource.Play();
                     InputSceneAction();
                 }
             }
@@ -40,6 +42,8 @@ public class StorySkip : MonoBehaviour
     }
 
     private void InputSceneAction(){
+
+
         if (m_sceneType == SceneType.Prologe)
         {
             FadeManager.Instance.LoadScene("Stage1", 1f);

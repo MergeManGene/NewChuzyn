@@ -17,6 +17,10 @@ public class GameManager : MonoBehaviour {
     public enum PlayerFormState { Normal,Ghost};
     public static PlayerFormState PlayerFormInstanse;
 
+    private AudioSource m_bgm;
+
+    [SerializeField]
+    private AudioClip m_clearBgm;
 
 
     /// <summary>ステージクリアフラグ</summary>
@@ -27,6 +31,15 @@ public class GameManager : MonoBehaviour {
     private GameObject[] m_clearEffect;
 
     private GameObject m_clearObject;
+    
+    private GameObject m_flash;
+
+    private void Start()
+    {
+        m_bgm = GameObject.Find("Main Camera").GetComponent<AudioSource>();
+        m_flash = GameObject.Find("FlashLayer");
+    }
+
 
     private void StageClear(){
         if (stageState == StageState.Stage1 && Clearing){
@@ -37,6 +50,10 @@ public class GameManager : MonoBehaviour {
     private void ClearFirst(){
         //クリアしたら表示
         if (Clearing){
+            m_bgm.clip = m_clearBgm;
+            m_bgm.Play();
+            if(m_flash != null)m_flash.SetActive(false);
+
             m_clearObject = Instantiate(m_clearEffect[0], Camera.main.transform.position, Quaternion.identity);
             Clearing = false;
         }

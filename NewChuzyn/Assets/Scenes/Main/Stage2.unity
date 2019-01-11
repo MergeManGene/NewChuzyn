@@ -380,6 +380,53 @@ MonoBehaviour:
   m_InstancedGameObject: {fileID: 0}
   m_Flags: 3
   m_ColliderType: 1
+--- !u!1001 &779152171
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4881151703846460, guid: 6c35e5277ef71794ea4a97e5edf62d16, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 73.91337
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881151703846460, guid: 6c35e5277ef71794ea4a97e5edf62d16, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1.4561578
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881151703846460, guid: 6c35e5277ef71794ea4a97e5edf62d16, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0.27148438
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881151703846460, guid: 6c35e5277ef71794ea4a97e5edf62d16, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881151703846460, guid: 6c35e5277ef71794ea4a97e5edf62d16, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881151703846460, guid: 6c35e5277ef71794ea4a97e5edf62d16, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881151703846460, guid: 6c35e5277ef71794ea4a97e5edf62d16, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881151703846460, guid: 6c35e5277ef71794ea4a97e5edf62d16, type: 2}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 114757595313807934, guid: 6c35e5277ef71794ea4a97e5edf62d16,
+        type: 2}
+      propertyPath: m_clearBgm
+      value: 
+      objectReference: {fileID: 8300000, guid: d86c6c34266d1204c9afb5c36e07e986, type: 3}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6c35e5277ef71794ea4a97e5edf62d16, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &797737418
 GameObject:
   m_ObjectHideFlags: 0
