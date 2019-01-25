@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "640017500492",
+    "firebase_url": "https://new-chuzyn.firebaseio.com",
+    "project_id": "new-chuzyn",
+    "storage_bucket": "new-chuzyn.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:640017500492:android:cb9e0009bec72d12",
+        "android_client_info": {
+          "package_name": "Merge.Man.Gene"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "640017500492-b4vlu2fb7ulf9e7tbuhq30ceb6ap3f2v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyADc732lPjrlXTOzBE_-9WsYRjezac0FWI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
