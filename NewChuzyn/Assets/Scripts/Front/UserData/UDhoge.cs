@@ -18,8 +18,7 @@ public class UDhoge : MonoBehaviour {
         Debug.Log("へい" + userDB);
 
         //ageのノードからtimeで昇順ソートして最大10件を取る（非同期)
-        userDB.Child("userid").GetValueAsync().ContinueWith(task =>
-        {
+        userDB.Child("userid").GetValueAsync().ContinueWith(task =>{
             //取得失敗時
             if (task.IsFaulted){
                 Debug.Log("取得失敗");
@@ -33,7 +32,6 @@ public class UDhoge : MonoBehaviour {
                 //取得の仕方例：
                 //snapshot.Child("何番か数値").Child("").GetValue(true)));
                 Debug.Log(snapshot.Child("1").Child("age").GetValue(true));
-
 
                 //書き込み
                 //ノードにレコードを登録(Push)して生成されたキーを取得
@@ -55,7 +53,7 @@ public class UDhoge : MonoBehaviour {
                 //データ更新
                 userDB.UpdateChildrenAsync(map);
 
-                //結果リストemulatorで処理
+                //結果リストをイナムレーターで処理
                 IEnumerator<DataSnapshot> en = snapshot.Children.GetEnumerator();
             }
         });
