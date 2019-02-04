@@ -14,7 +14,8 @@ public class ActorPlayer : ActorBase
     //プレイヤーの形態
     public enum PlayerForm { 
         Normal, 
-        Ghost 
+        Ghost,
+        Fighter
     }
 
     //現在のプレイヤーの形態
@@ -42,7 +43,6 @@ public class ActorPlayer : ActorBase
     public override void Init(){
         m_touchZone = GameObject.Find("TouchZone").GetComponent<TouchZone>();
         ballObject = GameObject.Find("Ball").GetComponent<IBall>();
-    
     }
 
     /// <summary>
@@ -67,6 +67,12 @@ public class ActorPlayer : ActorBase
             m_playerForm = PlayerForm.Ghost;
             SoundPlayer.Instance.PlaySE("GhostSE");
         }
+
+        if(arg_col.tag=="Fighter"){
+            //プレイヤーを格闘状態に移行
+            m_playerForm = PlayerForm.Fighter;
+        }
+
         if (arg_col.tag == "Paipu"){
             colPlayerOBject = arg_col.gameObject;
         }

@@ -24,7 +24,7 @@ public class PassWall : MonoBehaviour {
         if (arg_col.collider.tag == "Player"){
             if (m_player.m_playerForm == IPlayer.PlayerForm.Ghost){
                 m_collider2D.isTrigger = true;
-            }           
+            } 
         }
     }
 
